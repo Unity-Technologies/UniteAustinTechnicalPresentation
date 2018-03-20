@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1043179596785732}
+  m_IsPrefabParent: 1
+--- !u!1 &1043179596785732
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4068909764671696}
+  - component: {fileID: 114289179744242758}
+  - component: {fileID: 114274799740712584}
+  m_Layer: 0
+  m_Name: TextureAnimator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4068909764671696
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1043179596785732}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114274799740712584
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1043179596785732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23062051f9119df42858e97380da6451, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MeleeMeshRenderer: {fileID: 0}
+  TankMeshRenderer: {fileID: 0}
+  RangedMeshRenderer: {fileID: 0}
+  SkeletonMeshRenderer: {fileID: 0}
+  AnimationSpeed: 1
+  MeleeMaterial: {fileID: 2100000, guid: a81e6cc18e03b6846aacdd58e384e303, type: 2}
+  TankMaterial: {fileID: 2100000, guid: 186c887ee4faded40a1fe190a7050da9, type: 2}
+  RangedMaterial: {fileID: 2100000, guid: a5f784c3c4b13aa4fb2d1752f06e26a8, type: 2}
+  SkeletonMaterial: {fileID: 2100000, guid: 01262259b8597f34886395bfc78a3dac, type: 2}
+  MeleeLods:
+    Lod1Mesh: {fileID: 4300000, guid: e3010f68bc4325d4b8bda984478bcb13, type: 3}
+    Lod2Mesh: {fileID: 4300000, guid: 48b3d8004d108494982e3af248da9cd3, type: 3}
+    Lod3Mesh: {fileID: 4300000, guid: 7d974cb146983c348a88e137712b8d20, type: 3}
+    Lod1Distance: 50
+    Lod2Distance: 100
+    Lod3Distance: 200
+    Scale: 1.5
+  TankLods:
+    Lod1Mesh: {fileID: 4300000, guid: baa4d057cb759f4409aeed23d3a793f3, type: 3}
+    Lod2Mesh: {fileID: 4300000, guid: 3c4d25f6cea49d14cbc980280956a647, type: 3}
+    Lod3Mesh: {fileID: 4300000, guid: cac151c8863a6c140873d85e1fda035c, type: 3}
+    Lod1Distance: 50
+    Lod2Distance: 100
+    Lod3Distance: 200
+    Scale: 1.5
+  RangedLods:
+    Lod1Mesh: {fileID: 4300000, guid: c7cb9d15a03f01145a0bb7e21770da53, type: 3}
+    Lod2Mesh: {fileID: 4300000, guid: 00a9b7ed951da6c4d9c7bafe5c5c51dd, type: 3}
+    Lod3Mesh: {fileID: 4300000, guid: 564ab9f8c85427743aaf4c1e8400d8f3, type: 3}
+    Lod1Distance: 150
+    Lod2Distance: 200
+    Lod3Distance: 250
+    Scale: 0.75
+  SkeletonLods:
+    Lod1Mesh: {fileID: 4300000, guid: 325d845a8317c2240905bd464b84d6f8, type: 3}
+    Lod2Mesh: {fileID: 4300000, guid: a026128cbd160514dafed0565a516ed2, type: 3}
+    Lod3Mesh: {fileID: 4300000, guid: a74541195774e1c4cbf37ae045cfb255, type: 3}
+    Lod1Distance: 50
+    Lod2Distance: 100
+    Lod3Distance: 200
+    Scale: 1.5
+--- !u!114 &114289179744242758
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1043179596785732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17014b467e03eee4782e064213b22e4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enabled: 0
+  updateInterval: 0.5

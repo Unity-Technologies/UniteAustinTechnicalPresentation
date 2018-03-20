@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 402b5b37641054d2aa7fd46be6c9bc67, type: 3}
+  m_Name: VolumetricFogProfile_Shot6
+  m_EditorClassIdentifier: 
+  lightingModel: 0
+  sunCopyColor: 0
+  density: 0.067
+  noiseStrength: 0.622
+  height: 45
+  baselineHeight: -8
+  distance: 70
+  distanceFallOff: 2.06
+  maxFogLength: 1000
+  maxFogLengthFallOff: 0
+  baselineRelativeToCamera: 0
+  baselineRelativeToCameraDelay: 0
+  noiseScale: 5.33
+  noiseSparse: -0.11
+  alpha: 1
+  color: {r: 0.8235294, g: 0.98539555, b: 1, a: 1}
+  specularColor: {r: 1, g: 1, b: 1, a: 1}
+  specularThreshold: 1
+  specularIntensity: 0.343
+  lightDirection: {x: 1, y: 0, z: -1}
+  lightIntensity: -0.28
+  lightColor: {r: 1, g: 0.93557304, b: 0.8455882, a: 1}
+  speed: 0
+  windDirection: {x: -1, y: 0, z: 0}
+  turbulenceStrength: 0
+  useXYPlane: 0
+  skyColor: {r: 1, g: 1, b: 1, a: 0.609}
+  skyHaze: 0
+  skySpeed: 0.3
+  skyNoiseStrength: 0.18
+  skyAlpha: 0.588
+  stepping: 5
+  steppingNear: 0
+  dithering: 0
+  ditherStrength: 0.7

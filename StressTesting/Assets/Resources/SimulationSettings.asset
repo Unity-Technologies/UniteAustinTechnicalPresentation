@@ -1,0 +1,134 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8acb433732bead24b9f795ff0fbadc07, type: 3}
+  m_Name: SimulationSettings
+  m_EditorClassIdentifier: 
+  UnitsPerFormation: 128
+  FormationWidth: 16
+  IfBurstIsNotSupportedSpawnFormationsDividedBy: 5
+  MinionSpeed: 2.3
+  BlastRadius: 10
+  ArcherHitTime: 0.7
+  MeteorStrike: {fileID: 0}
+  Ray: {fileID: 0}
+  GravityField: {fileID: 0}
+  Wings: {fileID: 0}
+  HolyNova: {fileID: 0}
+  Lightning: {fileID: 0}
+  FormationAudioSource: {fileID: 1453369153722088, guid: 89e14254c048d4149adec2ac161c646b,
+    type: 2}
+  FormationClips:
+  - UnitType: 0
+    MovingClip: {fileID: 8300000, guid: f5b9fb2cd58fdeb4da125bf0a7cae60b, type: 3}
+    FightingClip: {fileID: 8300000, guid: 441899f88e3198644bffc0136bb9f59c, type: 3}
+  - UnitType: 1
+    MovingClip: {fileID: 8300000, guid: dcc1d9524814bd84e939cd17f72c558d, type: 3}
+    FightingClip: {fileID: 8300000, guid: a4a651b8d745bed49a23d38bcb87cc5e, type: 3}
+  - UnitType: 2
+    MovingClip: {fileID: 8300000, guid: 695faa7cd45e03c458ad5f52a9491790, type: 3}
+    FightingClip: {fileID: 8300000, guid: 44267d4f4e074104fbaa5df7bc090818, type: 3}
+  - UnitType: 3
+    MovingClip: {fileID: 8300000, guid: 0013b18eb76c74e489b6546ece2316cc, type: 3}
+    FightingClip: {fileID: 8300000, guid: 8de2244073db48e4a9eb107b0ca58ea9, type: 3}
+  EnableSpawners: 1
+  SpawnTimesPerUnit:
+  - 1
+  - 1
+  - 1
+  - 1
+  FormationUpdateFrequency: 20
+  ArcherAttackTime: 7
+  TimeToSpawnBatch: 0.1
+  MinionScaleMin: 0.9
+  MinionScaleMax: 1.1
+  MinionAnimationSpeedMin: 0.8
+  MinionAnimationSpeedMax: 1.2
+  MinionHeightOffsetMin: 0.05
+  MinionHeightOffsetMax: 0.2
+  DisableRendering: 0
+  SpellSettings:
+  - spell: 0
+    explosionDistance: 10
+    blastDirectionModifier:
+      x: 0
+      y: 0
+    blastDirectionFactor:
+      x: 1
+      y: 0.8
+    verticalComponentFactor: 1
+    randomHorizontal: 0.5
+    useInvertedDistance: 1
+  - spell: 1
+    explosionDistance: 15
+    blastDirectionModifier:
+      x: 0
+      y: 0
+    blastDirectionFactor:
+      x: 1
+      y: 1
+    verticalComponentFactor: 1
+    randomHorizontal: 0.2
+    useInvertedDistance: 0
+  - spell: 2
+    explosionDistance: 20
+    blastDirectionModifier:
+      x: 0
+      y: 0
+    blastDirectionFactor:
+      x: -1
+      y: -1
+    verticalComponentFactor: 1.1
+    randomHorizontal: 0.4
+    useInvertedDistance: 1
+  - spell: 3
+    explosionDistance: 15
+    blastDirectionModifier:
+      x: 0
+      y: 0
+    blastDirectionFactor:
+      x: 1
+      y: 1
+    verticalComponentFactor: 1
+    randomHorizontal: 0.2
+    useInvertedDistance: 0
+  - spell: 4
+    explosionDistance: 10
+    blastDirectionModifier:
+      x: 0
+      y: -1.2
+    blastDirectionFactor:
+      x: 0.7
+      y: 1
+    verticalComponentFactor: 0.9
+    randomHorizontal: 0.4
+    useInvertedDistance: 1
+  - spell: 5
+    explosionDistance: 30
+    blastDirectionModifier:
+      x: 0
+      y: 0
+    blastDirectionFactor:
+      x: 1
+      y: 1
+    verticalComponentFactor: 1
+    randomHorizontal: 0.2
+    useInvertedDistance: 0
+  - spell: 6
+    explosionDistance: 50
+    blastDirectionModifier:
+      x: 0
+      y: 0
+    blastDirectionFactor:
+      x: 1
+      y: 1
+    verticalComponentFactor: 1
+    randomHorizontal: 0.2
+    useInvertedDistance: 0

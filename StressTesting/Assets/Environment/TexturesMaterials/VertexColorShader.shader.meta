@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 21ab4237cd0b79b41a21ad762c6fe1b4
+timeCreated: 1505835723
+licenseType: Pro
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _colorB: {fileID: 2800000, guid: bbe818838f3f8a04c85a28d62f07f957, type: 3}
+  - _colorA: {fileID: 2800000, guid: 246e25d0122e42b4e8693f8b60603801, type: 3}
+  - _colorC: {fileID: 2800000, guid: 6216567a30477c141b155ee21160b2d9, type: 3}
+  - _colorD: {fileID: 2800000, guid: e62ef818f2b48bb45b234f3bdb2e8f7b, type: 3}
+  - _NormalB: {fileID: 2800000, guid: bbe818838f3f8a04c85a28d62f07f957, type: 3}
+  - _NormalA: {fileID: 2800000, guid: 246e25d0122e42b4e8693f8b60603801, type: 3}
+  - _NormalC: {fileID: 2800000, guid: 6216567a30477c141b155ee21160b2d9, type: 3}
+  - _NormalD: {fileID: 2800000, guid: e62ef818f2b48bb45b234f3bdb2e8f7b, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

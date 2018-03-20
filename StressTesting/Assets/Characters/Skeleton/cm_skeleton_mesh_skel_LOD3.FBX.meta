@@ -1,0 +1,135 @@
+fileFormatVersion: 2
+guid: a74541195774e1c4cbf37ae045cfb255
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Bip001
+    100002: Bip001 Head
+    100004: Bip001 L Calf
+    100006: Bip001 L Foot
+    100008: Bip001 L Forearm
+    100010: Bip001 L Hand
+    100012: Bip001 L Thigh
+    100014: Bip001 L UpperArm
+    100016: Bip001 Pelvis
+    100018: Bip001 R Calf
+    100020: Bip001 R Foot
+    100022: Bip001 R Forearm
+    100024: Bip001 R Hand
+    100026: Bip001 R Thigh
+    100028: Bip001 R UpperArm
+    100030: Bip001 Spine
+    100032: Bip001 Spine1
+    100034: //RootNode
+    100036: minion_lp
+    100038: minion_skeleton_LOD3
+    100040: origin
+    400000: Bip001
+    400002: Bip001 Head
+    400004: Bip001 L Calf
+    400006: Bip001 L Foot
+    400008: Bip001 L Forearm
+    400010: Bip001 L Hand
+    400012: Bip001 L Thigh
+    400014: Bip001 L UpperArm
+    400016: Bip001 Pelvis
+    400018: Bip001 R Calf
+    400020: Bip001 R Foot
+    400022: Bip001 R Forearm
+    400024: Bip001 R Hand
+    400026: Bip001 R Thigh
+    400028: Bip001 R UpperArm
+    400030: Bip001 Spine
+    400032: Bip001 Spine1
+    400034: //RootNode
+    400036: minion_lp
+    400038: minion_skeleton_LOD3
+    400040: origin
+    2100000: 'Material #25'
+    4300000: minion_skeleton_LOD3
+    7400000: Take 001
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: minion_skeleton_LOD3
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

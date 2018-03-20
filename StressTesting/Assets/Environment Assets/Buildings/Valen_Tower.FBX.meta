@@ -1,0 +1,201 @@
+fileFormatVersion: 2
+guid: eb09dd20c6e4b9349a61569a9db687ce
+timeCreated: 1506093925
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Valen_podium_star
+    100002: Valen_stone_a_01
+    100004: Valen_stone_a_02
+    100006: Valen_stone_b_01
+    100008: Valen_stone_b_02
+    100010: Valen_stone_b_03
+    100012: Valen_stone_b_04
+    100014: Valen_stone_b_05
+    100016: Valen_stone_b_06
+    100018: Valen_stone_c_01
+    100020: Valen_stone_c_02
+    100022: Valen_stone_c_03
+    100024: Valen_stone_c_04
+    100026: //RootNode
+    100028: vp_block
+    100030: vp_podium_back
+    100032: vp_podium_broken
+    100034: vp_podium_rubble
+    100036: vp_podium_stairs
+    100038: vp_podium_trims
+    100040: vp_podium_walls
+    400000: Valen_podium_star
+    400002: Valen_stone_a_01
+    400004: Valen_stone_a_02
+    400006: Valen_stone_b_01
+    400008: Valen_stone_b_02
+    400010: Valen_stone_b_03
+    400012: Valen_stone_b_04
+    400014: Valen_stone_b_05
+    400016: Valen_stone_b_06
+    400018: Valen_stone_c_01
+    400020: Valen_stone_c_02
+    400022: Valen_stone_c_03
+    400024: Valen_stone_c_04
+    400026: //RootNode
+    400028: vp_block
+    400030: vp_podium_back
+    400032: vp_podium_broken
+    400034: vp_podium_rubble
+    400036: vp_podium_stairs
+    400038: vp_podium_trims
+    400040: vp_podium_walls
+    2100000: mat_vp_stone_a
+    2100002: mat_vp_stone_c
+    2100004: mat_vp_stone_b
+    2100006: mat_vp_trims
+    2100008: 01 - Default
+    2100010: mat_vp_broken
+    2100012: mat_vp_stairs
+    2100014: mat_vp_rubble
+    2100016: mat_vp_block
+    2100018: mat_vp_star
+    2300000: Valen_podium_star
+    2300002: Valen_stone_a_01
+    2300004: Valen_stone_a_02
+    2300006: Valen_stone_b_01
+    2300008: Valen_stone_b_02
+    2300010: Valen_stone_b_03
+    2300012: Valen_stone_b_04
+    2300014: Valen_stone_b_05
+    2300016: Valen_stone_b_06
+    2300018: Valen_stone_c_01
+    2300020: Valen_stone_c_02
+    2300022: Valen_stone_c_03
+    2300024: Valen_stone_c_04
+    2300026: vp_block
+    2300028: vp_podium_back
+    2300030: vp_podium_broken
+    2300032: vp_podium_rubble
+    2300034: vp_podium_stairs
+    2300036: vp_podium_trims
+    2300038: vp_podium_walls
+    3300000: Valen_podium_star
+    3300002: Valen_stone_a_01
+    3300004: Valen_stone_a_02
+    3300006: Valen_stone_b_01
+    3300008: Valen_stone_b_02
+    3300010: Valen_stone_b_03
+    3300012: Valen_stone_b_04
+    3300014: Valen_stone_b_05
+    3300016: Valen_stone_b_06
+    3300018: Valen_stone_c_01
+    3300020: Valen_stone_c_02
+    3300022: Valen_stone_c_03
+    3300024: Valen_stone_c_04
+    3300026: vp_block
+    3300028: vp_podium_back
+    3300030: vp_podium_broken
+    3300032: vp_podium_rubble
+    3300034: vp_podium_stairs
+    3300036: vp_podium_trims
+    3300038: vp_podium_walls
+    4300000: Valen_stone_a_01
+    4300002: Valen_stone_c_02
+    4300004: Valen_stone_b_01
+    4300006: vp_podium_trims
+    4300008: vp_podium_walls
+    4300010: vp_podium_broken
+    4300012: vp_podium_stairs
+    4300014: Valen_stone_a_02
+    4300016: Valen_stone_b_03
+    4300018: Valen_stone_c_03
+    4300020: vp_podium_rubble
+    4300022: Valen_stone_c_04
+    4300024: Valen_stone_b_04
+    4300026: Valen_stone_c_01
+    4300028: Valen_stone_b_05
+    4300030: Valen_stone_b_06
+    4300032: Valen_stone_b_02
+    4300034: vp_block
+    4300036: vp_podium_back
+    4300038: Valen_podium_star
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,131 @@
+fileFormatVersion: 2
+guid: cac80087d37e26f4285414eab7807df2
+timeCreated: 1504778549
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: arrow:G_arrow:HeadM1_arrow:MeshG_arrow:polySurface1
+    100004: arrow:G_arrow:MeshG_arrow:Wing1M1_arrow:polySurface1
+    100006: arrow:G_arrow:MeshG_arrow:Wing2M1_arrow:polySurface1
+    100008: arrow:G_arrow:MeshG_arrow:Wing3M1_arrow:polySurface1
+    100010: arrow:pCylinder4_arrow:polySurface1
+    100012: arrow:polySurface1
+    100014: Arrow_
+    400000: //RootNode
+    400002: arrow:G_arrow:HeadM1_arrow:MeshG_arrow:polySurface1
+    400004: arrow:G_arrow:MeshG_arrow:Wing1M1_arrow:polySurface1
+    400006: arrow:G_arrow:MeshG_arrow:Wing2M1_arrow:polySurface1
+    400008: arrow:G_arrow:MeshG_arrow:Wing3M1_arrow:polySurface1
+    400010: arrow:pCylinder4_arrow:polySurface1
+    400012: arrow:polySurface1
+    400014: Arrow_
+    2100000: arrow_G_arrow_HeadM1_arrow_MeshG_arrow_polySurface1Mat
+    2100002: arrow_G_arrow_MeshG_arrow_Wing1M1_arrow_polySurface1Mat
+    2100004: arrow_G_arrow_MeshG_arrow_Wing2M1_arrow_polySurface1Mat
+    2100006: arrow_G_arrow_MeshG_arrow_Wing3M1_arrow_polySurface1Mat
+    2100008: arrow_pCylinder4_arrow_polySurface1Mat
+    2100010: arrow_polySurface1Mat
+    2100012: Arrow_Mat
+    2300000: arrow:G_arrow:HeadM1_arrow:MeshG_arrow:polySurface1
+    2300002: arrow:G_arrow:MeshG_arrow:Wing1M1_arrow:polySurface1
+    2300004: arrow:G_arrow:MeshG_arrow:Wing2M1_arrow:polySurface1
+    2300006: arrow:G_arrow:MeshG_arrow:Wing3M1_arrow:polySurface1
+    2300008: arrow:pCylinder4_arrow:polySurface1
+    2300010: arrow:polySurface1
+    2300012: Arrow_
+    3300000: arrow:G_arrow:HeadM1_arrow:MeshG_arrow:polySurface1
+    3300002: arrow:G_arrow:MeshG_arrow:Wing1M1_arrow:polySurface1
+    3300004: arrow:G_arrow:MeshG_arrow:Wing2M1_arrow:polySurface1
+    3300006: arrow:G_arrow:MeshG_arrow:Wing3M1_arrow:polySurface1
+    3300008: arrow:pCylinder4_arrow:polySurface1
+    3300010: arrow:polySurface1
+    3300012: Arrow_
+    4300000: arrow:G_arrow:HeadM1_arrow:MeshG_arrow:polySurface1
+    4300002: arrow:G_arrow:MeshG_arrow:Wing1M1_arrow:polySurface1
+    4300004: arrow:G_arrow:MeshG_arrow:Wing2M1_arrow:polySurface1
+    4300006: arrow:G_arrow:MeshG_arrow:Wing3M1_arrow:polySurface1
+    4300008: arrow:pCylinder4_arrow:polySurface1
+    4300010: arrow:polySurface1
+    4300012: Arrow_
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    autoMapExternalMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.4
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

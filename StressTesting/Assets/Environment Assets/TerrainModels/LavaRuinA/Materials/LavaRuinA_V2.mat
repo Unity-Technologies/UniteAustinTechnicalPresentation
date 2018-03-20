@@ -1,0 +1,204 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: LavaRuinA_V2
+  m_Shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _BUMPMODE_PARALLAX _EMISSION _NORMALMAP _SPECGLOSSMAP
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Ao2Map:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 4be434479a75b1442bf4a9ace2cf583e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DecalTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMaterialMap:
+        m_Texture: {fileID: 2800000, guid: 2b77d5cb601375f4ba50c6194c126e59, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DiffCubeIBL:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DiffuseMap:
+        m_Texture: {fileID: 2800000, guid: 4f7c098821f337340b4bd65d34dfec52, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DissolveTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Illum:
+        m_Texture: {fileID: 8900000, guid: c3f0be505785b3f47a90821a40287085, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Illum_copy:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _IncandescenceMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 20df876f5f390c9479edb4e4bbc42696, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: 4ad1a2e782f25f540b341e8a2c0db88f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 2800000, guid: 94ab36ac9eeb8dd48b6b4eee42c72637, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RimTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecCubeIBL:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 2800000, guid: b3689734bb9c9914aabaf5e17ed55b9f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecTex:
+        m_Texture: {fileID: 2800000, guid: e11ac2b10261d8a49b0b6a87ba7fd652, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TeamColorMaskMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AO2: 0
+    - _AlphaTestRef: 0.5
+    - _Ao2MapUV: 1
+    - _BaseColorVertexTint: 0
+    - _BumpMode: 0
+    - _BumpScale: 1
+    - _CubeIntensity: 0.67
+    - _Cutoff: 0.5
+    - _Decal: 0
+    - _DecalAlphaVertexTint: 0
+    - _DecalSpecularity: 0.5
+    - _DecalTexUV: 0
+    - _DecalWeight: 1
+    - _DetailAlbedoMapUV: 0
+    - _DetailMode: 0
+    - _DetailNormalMapScale: 1
+    - _DetailT: 0
+    - _DetailWeight: 1
+    - _Dissolve: 0
+    - _DissolveCutoff: 0
+    - _DissolveEdgeWidth: 0.01
+    - _DissolveGlowGainUI: 0
+    - _DissolveGlowWeightUI: 0
+    - _DissolveTexUV: 0
+    - _DstBlend: 0
+    - _Emission: 0
+    - _EmissionGainUI: 0
+    - _EmissionScaleUI: 0
+    - _EmissionWeightUI: 0
+    - _Fresnel: 1
+    - _GlossMapScale: 1
+    - _Glossiness: 0.1
+    - _GlossyReflections: 1
+    - _IncandescenceMapUV: 0
+    - _Lightmapping: 1
+    - _MainPhysicalProperties: 0
+    - _MainTexUV: 0
+    - _MainTextures: 0
+    - _MaxSamples: 20
+    - _Metal: 1
+    - _Metallic: 0
+    - _MinSamples: 4
+    - _Mode: 0
+    - _OcclusionStrength: 0.801
+    - _Parallax: 0.02
+    - _ParallaxT: 0
+    - _PowVal: 0.57
+    - _Rim: 0
+    - _RimBias: 0
+    - _RimGainUI: 0
+    - _RimPower: 4
+    - _RimTexUV: 0
+    - _RimWeightUI: 0
+    - _Roughness: 1
+    - _Shininess: 0.19479017
+    - _SmoothnessTextureChannel: 0
+    - _SpecInt: 1
+    - _SpecularHighlights: 1
+    - _SpecularPower: 1
+    - _Specularity: 1
+    - _SrcBlend: 1
+    - _TeamColor: 0
+    - _TeamColorMode: 1
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _AmbientColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.7647059, g: 0.7647059, b: 0.7647059, a: 1}
+    - _DC: {r: 1, g: 1, b: 1, a: 1}
+    - _DecalColor: {r: 1, g: 1, b: 1, a: 1}
+    - _DetailAlbedoMapVelocity: {r: 0, g: 0, b: 0, a: 0}
+    - _DissolveGlowColor: {r: 1, g: 1, b: 1, a: 1}
+    - _DissolveGlowTintUI: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
+    - _EmissionColorUI: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionTintUI: {r: 1, g: 1, b: 1, a: 1}
+    - _IncandescenceMapVelocity: {r: 0, g: 0, b: 0, a: 0}
+    - _MainTexVelocity: {r: 0, g: 0, b: 0, a: 0}
+    - _RimColor: {r: 1, g: 1, b: 1, a: 1}
+    - _RimTexVelocity: {r: 0, g: 0, b: 0, a: 0}
+    - _RimTintUI: {r: 1, g: 1, b: 1, a: 1}
+    - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SpecularColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _TeamColor0: {r: 1, g: 1, b: 1, a: 1}
+    - _TeamColor1: {r: 1, g: 1, b: 1, a: 1}
+    - _TeamColor2: {r: 1, g: 1, b: 1, a: 1}
+    - _TeamColor3: {r: 1, g: 1, b: 1, a: 1}

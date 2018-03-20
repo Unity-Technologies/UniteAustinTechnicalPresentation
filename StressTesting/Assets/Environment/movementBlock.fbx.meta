@@ -1,0 +1,195 @@
+fileFormatVersion: 2
+guid: 8ccd570041b15444d947673ff15f77f7
+timeCreated: 1506161542
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: CliffMovementBlock
+    100002: movementBlock
+    100004: //RootNode
+    100006: movementBlock1
+    100008: movementBlock10
+    100010: movementBlock11
+    100012: movementBlock12
+    100014: movementBlock13
+    100016: movementBlock14
+    100018: movementBlock15
+    100020: movementBlock16
+    100022: movementBlock17
+    100024: movementBlock18
+    100026: movementBlock19
+    100028: movementBlock2
+    100030: movementBlock3
+    100032: movementBlock4
+    100034: movementBlock5
+    100036: movementBlock6
+    100038: movementBlock7
+    100040: movementBlock8
+    100042: movementBlock9
+    100044: transform1
+    400000: CliffMovementBlock
+    400002: //RootNode
+    400004: movementBlock
+    400006: movementBlock1
+    400008: movementBlock10
+    400010: movementBlock11
+    400012: movementBlock12
+    400014: movementBlock13
+    400016: movementBlock14
+    400018: movementBlock15
+    400020: movementBlock16
+    400022: movementBlock17
+    400024: movementBlock18
+    400026: movementBlock19
+    400028: movementBlock2
+    400030: movementBlock3
+    400032: movementBlock4
+    400034: movementBlock5
+    400036: movementBlock6
+    400038: movementBlock7
+    400040: movementBlock8
+    400042: movementBlock9
+    400044: transform1
+    2100000: lambert2
+    2300000: movementBlock
+    2300002: movementBlock1
+    2300004: movementBlock10
+    2300006: movementBlock11
+    2300008: movementBlock12
+    2300010: movementBlock13
+    2300012: movementBlock14
+    2300014: movementBlock15
+    2300016: movementBlock16
+    2300018: movementBlock17
+    2300020: movementBlock18
+    2300022: movementBlock19
+    2300024: movementBlock2
+    2300026: movementBlock3
+    2300028: movementBlock4
+    2300030: movementBlock5
+    2300032: movementBlock6
+    2300034: movementBlock7
+    2300036: movementBlock8
+    2300038: movementBlock9
+    3300000: movementBlock
+    3300002: movementBlock1
+    3300004: movementBlock10
+    3300006: movementBlock11
+    3300008: movementBlock12
+    3300010: movementBlock13
+    3300012: movementBlock14
+    3300014: movementBlock15
+    3300016: movementBlock16
+    3300018: movementBlock17
+    3300020: movementBlock18
+    3300022: movementBlock19
+    3300024: movementBlock2
+    3300026: movementBlock3
+    3300028: movementBlock4
+    3300030: movementBlock5
+    3300032: movementBlock6
+    3300034: movementBlock7
+    3300036: movementBlock8
+    3300038: movementBlock9
+    4300000: movementBlock19
+    4300002: movementBlock18
+    4300004: movementBlock17
+    4300006: movementBlock16
+    4300008: movementBlock15
+    4300010: movementBlock14
+    4300012: movementBlock13
+    4300014: movementBlock12
+    4300016: movementBlock11
+    4300018: movementBlock10
+    4300020: movementBlock9
+    4300022: movementBlock8
+    4300024: movementBlock7
+    4300026: movementBlock6
+    4300028: movementBlock5
+    4300030: movementBlock4
+    4300032: movementBlock3
+    4300034: movementBlock2
+    4300036: movementBlock1
+    4300038: movementBlock
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,309 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1035675115168802}
+  m_IsPrefabParent: 1
+--- !u!1 &1035675115168802
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4320623442348810}
+  - component: {fileID: 114509147417126464}
+  - component: {fileID: 114930268511145968}
+  - component: {fileID: 95319182414533158}
+  m_Layer: 0
+  m_Name: PostProcPresetsAndAnim (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4320623442348810
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1035675115168802}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &95319182414533158
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1035675115168802}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d2f4c18f9128e36478d43b1377beea69, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114509147417126464
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1035675115168802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a4d6c09da51bad47a895d0ff6964874, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PosprocessingIndex: 0
+  profiles:
+  - {fileID: 11400000, guid: bc99ec20f7cb7d44d9d6d23b46c27aaf, type: 2}
+  - {fileID: 11400000, guid: d1f4f41cd134e6f40b6e886e8222b714, type: 2}
+  - {fileID: 11400000, guid: 68b84c131ba8dea4181dd6190ea03ac5, type: 2}
+  - {fileID: 11400000, guid: fb841d71ceb5e7b4aa18c44cb01df754, type: 2}
+  - {fileID: 11400000, guid: cb87b3fa1431b144d8b25ca08d64bb43, type: 2}
+  - {fileID: 11400000, guid: 224341f3590636545bf32a63bb793ca5, type: 2}
+  - {fileID: 11400000, guid: adcba960c13ad4c489dd34b9549efd99, type: 2}
+  - {fileID: 11400000, guid: b611d2aaf79d3d14795883e1373a2c3d, type: 2}
+  - {fileID: 11400000, guid: 4471ff97d97695f42879d80b79af482e, type: 2}
+  - {fileID: 11400000, guid: c291206c33b4ee548977ddbf58ec3120, type: 2}
+  - {fileID: 11400000, guid: 68b84c131ba8dea4181dd6190ea03ac5, type: 2}
+  - {fileID: 11400000, guid: 68b84c131ba8dea4181dd6190ea03ac5, type: 2}
+  VolumetricFogIndex: 0
+  volumetricFogs:
+  - {fileID: 11400000, guid: 56d33bd5f4640b648a7bf3e6772d8504, type: 2}
+  - {fileID: 11400000, guid: f109e4a72568d1b48b3f360221b9c40d, type: 2}
+  - {fileID: 11400000, guid: 841471124e6be0f4ca116308106b976a, type: 2}
+  - {fileID: 11400000, guid: b4e4e23fd7388384eb4965089bdd3691, type: 2}
+  - {fileID: 11400000, guid: e6e3de2675f59a847a79d9c0388ecc52, type: 2}
+  - {fileID: 11400000, guid: 7856cddd2a94e94429f5c7de80f43306, type: 2}
+  - {fileID: 11400000, guid: 5f3a1e4a83d61384c9617bce1a4842d7, type: 2}
+  - {fileID: 11400000, guid: 1fefd79eec3fac740b88b788a705a676, type: 2}
+  - {fileID: 11400000, guid: 47ff880fdac22904d9015b79632348c4, type: 2}
+  - {fileID: 11400000, guid: 02b6bafdb6e60a341931f77c9bf529cd, type: 2}
+  - {fileID: 11400000, guid: ad5ed63c3bc825f459fa3fb35ee5ef1c, type: 2}
+  - {fileID: 11400000, guid: e877f7f718135e54897511aef0e2cc1d, type: 2}
+  fog: {fileID: 0}
+--- !u!114 &114930268511145968
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1035675115168802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df0f63349e0bd6648896d20970e5587b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dofEnabled: 1
+  copybackDof: 0
+  settings:
+    focusDistance: 28.38
+    aperture: 5
+    focalLength: 169
+    useCameraFov: 0
+    kernelSize: 3
+  bloomEnabled: 1
+  copybackBloom: 0
+  bloomSettings:
+    bloom:
+      intensity: 0.2
+      threshold: 0.2
+      softKnee: 0
+      radius: 2
+      antiFlicker: 1
+    lensDirt:
+      texture: {fileID: 0}
+      intensity: 0
+  colorGradingEnabled: 1
+  copybackColorGrading: 0
+  colorGradingSettings:
+    tonemapping:
+      tonemapper: 1
+      neutralBlackIn: 0.02
+      neutralWhiteIn: 10
+      neutralBlackOut: 0
+      neutralWhiteOut: 10
+      neutralWhiteLevel: 5.3
+      neutralWhiteClip: 10
+    basic:
+      postExposure: 0.2
+      temperature: 0
+      tint: 0
+      hueShift: 0
+      saturation: 1
+      contrast: 0.8
+    channelMixer:
+      red: {x: 1.7, y: 0, z: 0}
+      green: {x: 0, y: 1, z: 0}
+      blue: {x: 0, y: 0, z: 0.7}
+      currentEditingChannel: 1
+    colorWheels:
+      mode: 1
+      log:
+        slope: {r: 1, g: 1, b: 1, a: 0}
+        power: {r: 1, g: 1, b: 1, a: 0}
+        offset: {r: 1, g: 1, b: 1, a: 0}
+      linear:
+        lift: {r: 1, g: 1, b: 1, a: 0}
+        gamma: {r: 1, g: 1, b: 1, a: 0}
+        gain: {r: 1, g: 1, b: 1, a: 0}
+    curves:
+      master:
+        curve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 2
+            time: 0
+            value: 0
+            inSlope: 0
+            outSlope: 1
+            tangentMode: 0
+          - serializedVersion: 2
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 0
+            tangentMode: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 0
+        m_Loop: 0
+        m_ZeroValue: 0
+        m_Range: 1
+      red:
+        curve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 2
+            time: 0
+            value: 0
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+          - serializedVersion: 2
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 0
+        m_Loop: 0
+        m_ZeroValue: 0
+        m_Range: 1
+      green:
+        curve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 2
+            time: 0
+            value: 0
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+          - serializedVersion: 2
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 0
+        m_Loop: 0
+        m_ZeroValue: 0
+        m_Range: 1
+      blue:
+        curve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 2
+            time: 0
+            value: 0
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+          - serializedVersion: 2
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 0
+        m_Loop: 0
+        m_ZeroValue: 0
+        m_Range: 1
+      hueVShue:
+        curve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        m_Loop: 1
+        m_ZeroValue: 0.5
+        m_Range: 1
+      hueVSsat:
+        curve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        m_Loop: 1
+        m_ZeroValue: 0.5
+        m_Range: 1
+      satVSsat:
+        curve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        m_Loop: 0
+        m_ZeroValue: 0.5
+        m_Range: 1
+      lumVSsat:
+        curve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        m_Loop: 0
+        m_ZeroValue: 0.5
+        m_Range: 1
+      e_CurrentEditingCurve: 0
+      e_CurveY: 1
+      e_CurveR: 0
+      e_CurveG: 0
+      e_CurveB: 0
+  aoEnabled: 1
+  copybackAo: 0
+  aoSettings:
+    intensity: 4
+    radius: 0.65
+    sampleCount: 16
+    downsampling: 0
+    forceForwardCompatibility: 0
+    ambientOnly: 0
+    highPrecision: 1
