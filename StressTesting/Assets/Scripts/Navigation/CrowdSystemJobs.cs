@@ -242,6 +242,7 @@ public partial class CrowdSystem
         }
     }
 
+    [ComputeJobOptimization]
     public struct UpdateVelocityJob : IJobParallelFor
     {
         [ReadOnly]
