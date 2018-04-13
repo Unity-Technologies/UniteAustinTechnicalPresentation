@@ -166,8 +166,8 @@ public class FormationSystem : JobComponentSystem
 	[ComputeJobOptimization]
 	private struct SearchClosestFormations : IJobParallelFor
 	{
-		[ReadOnly] public NativeArray<FormationData> formations;
-		[ReadOnly] public NativeArray<Entity> formationEntities;
+		[DeallocateOnJobCompletion] [ReadOnly] public NativeArray<FormationData> formations;
+		[DeallocateOnJobCompletion] [ReadOnly] public NativeArray<Entity> formationEntities;
 		public ComponentDataArray<FormationClosestData> closestFormations;
 
 		public void Execute(int index)

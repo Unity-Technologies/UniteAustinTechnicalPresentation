@@ -79,38 +79,38 @@
       <file leaf-file-name="FormationSystem.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Systems/FormationSystem.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="209" column="64" lean-forward="false" selection-start-line="209" selection-start-column="64" selection-end-line="209" selection-end-column="64" />
+            <state relative-caret-position="276">
+              <caret line="168" column="33" lean-forward="false" selection-start-line="168" selection-start-column="9" selection-end-line="168" selection-end-column="34" />
               <folding>
-                <marker date="1523657489000" expanded="false" signature="6:137" ph="..." />
-                <marker date="1523657489000" expanded="true" signature="139:434" ph="/* This system should depend on the crowd system, but as systems can depend only on one thing, then all the forma ... */" />
-                <marker date="1523657489000" expanded="true" signature="528:8686" ph="{...}" />
-                <marker date="1523657489000" expanded="true" signature="556:1025" ph="{...}" />
-                <marker date="1523657489000" expanded="true" signature="1347:3845" ph="{...}" />
-                <marker date="1523657489000" expanded="true" signature="1420:1640" ph="/* NativeArrayExtensions.ResizeNativeArray(ref raycastHits, math.max(raycastHits.Length,minions.Length)); ... */" />
-                <marker date="1523657489000" expanded="true" signature="1710:1888" ph="{...}" />
-                <marker date="1523657489000" expanded="true" signature="2176:2238" ph="{...}" />
-                <marker date="1523657489000" expanded="true" signature="2536:2609" ph="{...}" />
-                <marker date="1523657489000" expanded="true" signature="2934:3069" ph="{...}" />
-                <marker date="1523657489000" expanded="true" signature="3246:3440" ph="{...}" />
-                <marker date="1523657489000" expanded="true" signature="3586:3803" ph="/* Pass two, rearrangeing the minion indices ... */" />
-                <marker date="1523657489000" expanded="true" signature="3924:5796" ph="{...}" />
-                <marker date="1523657489000" expanded="true" signature="4254:5793" ph="{...}" />
-                <marker date="1523657489000" expanded="true" signature="4558:4694" ph="{...}" />
-                <marker date="1523657489000" expanded="true" signature="4589:4677" ph="{...}" />
-                <marker date="1523657489000" expanded="true" signature="4874:5163" ph="{...}" />
-                <marker date="1523657489000" expanded="true" signature="5074:5158" ph="{...}" />
-                <marker date="1523657489000" expanded="true" signature="5226:5562" ph="{...}" />
-                <marker date="1523657489000" expanded="true" signature="5663:5711" ph="{...}" />
-                <marker date="1523657489000" expanded="true" signature="5881:6971" ph="{...}" />
-                <marker date="1523657489000" expanded="true" signature="6105:6968" ph="{...}" />
-                <marker date="1523657489000" expanded="true" signature="6340:6706" ph="{...}" />
-                <marker date="1523657489000" expanded="true" signature="6491:6701" ph="{...}" />
-                <marker date="1523657489000" expanded="true" signature="6641:6695" ph="{...}" />
-                <marker date="1523657489000" expanded="true" signature="7066:8684" ph="{...}" />
-                <marker date="1523657489000" expanded="true" signature="7394:8681" ph="{...}" />
-                <marker date="1523657489000" expanded="true" signature="7729:7869" ph="{...}" />
-                <marker date="1523657489000" expanded="true" signature="8071:8371" ph="{...}" />
+                <marker date="1523657930000" expanded="false" signature="6:137" ph="..." />
+                <marker date="1523657930000" expanded="true" signature="139:434" ph="/* This system should depend on the crowd system, but as systems can depend only on one thing, then all the forma ... */" />
+                <marker date="1523657930000" expanded="true" signature="528:8742" ph="{...}" />
+                <marker date="1523657930000" expanded="true" signature="556:1025" ph="{...}" />
+                <marker date="1523657930000" expanded="true" signature="1347:3845" ph="{...}" />
+                <marker date="1523657930000" expanded="true" signature="1420:1640" ph="/* NativeArrayExtensions.ResizeNativeArray(ref raycastHits, math.max(raycastHits.Length,minions.Length)); ... */" />
+                <marker date="1523657930000" expanded="true" signature="1710:1888" ph="{...}" />
+                <marker date="1523657930000" expanded="true" signature="2176:2238" ph="{...}" />
+                <marker date="1523657930000" expanded="true" signature="2536:2609" ph="{...}" />
+                <marker date="1523657930000" expanded="true" signature="2934:3069" ph="{...}" />
+                <marker date="1523657930000" expanded="true" signature="3246:3440" ph="{...}" />
+                <marker date="1523657930000" expanded="true" signature="3586:3803" ph="/* Pass two, rearrangeing the minion indices ... */" />
+                <marker date="1523657930000" expanded="true" signature="3924:5796" ph="{...}" />
+                <marker date="1523657930000" expanded="true" signature="4254:5793" ph="{...}" />
+                <marker date="1523657930000" expanded="true" signature="4558:4694" ph="{...}" />
+                <marker date="1523657930000" expanded="true" signature="4589:4677" ph="{...}" />
+                <marker date="1523657930000" expanded="true" signature="4874:5163" ph="{...}" />
+                <marker date="1523657930000" expanded="true" signature="5074:5158" ph="{...}" />
+                <marker date="1523657930000" expanded="true" signature="5226:5562" ph="{...}" />
+                <marker date="1523657930000" expanded="true" signature="5663:5711" ph="{...}" />
+                <marker date="1523657930000" expanded="true" signature="5881:7027" ph="{...}" />
+                <marker date="1523657930000" expanded="true" signature="6161:7024" ph="{...}" />
+                <marker date="1523657930000" expanded="true" signature="6396:6762" ph="{...}" />
+                <marker date="1523657930000" expanded="true" signature="6547:6757" ph="{...}" />
+                <marker date="1523657930000" expanded="true" signature="6697:6751" ph="{...}" />
+                <marker date="1523657930000" expanded="true" signature="7122:8740" ph="{...}" />
+                <marker date="1523657930000" expanded="true" signature="7450:8737" ph="{...}" />
+                <marker date="1523657930000" expanded="true" signature="7785:7925" ph="{...}" />
+                <marker date="1523657930000" expanded="true" signature="8127:8427" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -209,12 +209,12 @@
       <option name="presentableId" value="Default" />
       <updated>1523495668070</updated>
       <workItem from="1523495670203" duration="939000" />
-      <workItem from="1523655592284" duration="1903000" />
+      <workItem from="1523655592284" duration="2269000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2842000" />
+    <option name="totallyTimeSpent" value="3208000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -390,38 +390,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Systems/FormationSystem.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="209" column="64" lean-forward="false" selection-start-line="209" selection-start-column="64" selection-end-line="209" selection-end-column="64" />
+        <state relative-caret-position="276">
+          <caret line="168" column="33" lean-forward="false" selection-start-line="168" selection-start-column="9" selection-end-line="168" selection-end-column="34" />
           <folding>
-            <marker date="1523657489000" expanded="false" signature="6:137" ph="..." />
-            <marker date="1523657489000" expanded="true" signature="139:434" ph="/* This system should depend on the crowd system, but as systems can depend only on one thing, then all the forma ... */" />
-            <marker date="1523657489000" expanded="true" signature="528:8686" ph="{...}" />
-            <marker date="1523657489000" expanded="true" signature="556:1025" ph="{...}" />
-            <marker date="1523657489000" expanded="true" signature="1347:3845" ph="{...}" />
-            <marker date="1523657489000" expanded="true" signature="1420:1640" ph="/* NativeArrayExtensions.ResizeNativeArray(ref raycastHits, math.max(raycastHits.Length,minions.Length)); ... */" />
-            <marker date="1523657489000" expanded="true" signature="1710:1888" ph="{...}" />
-            <marker date="1523657489000" expanded="true" signature="2176:2238" ph="{...}" />
-            <marker date="1523657489000" expanded="true" signature="2536:2609" ph="{...}" />
-            <marker date="1523657489000" expanded="true" signature="2934:3069" ph="{...}" />
-            <marker date="1523657489000" expanded="true" signature="3246:3440" ph="{...}" />
-            <marker date="1523657489000" expanded="true" signature="3586:3803" ph="/* Pass two, rearrangeing the minion indices ... */" />
-            <marker date="1523657489000" expanded="true" signature="3924:5796" ph="{...}" />
-            <marker date="1523657489000" expanded="true" signature="4254:5793" ph="{...}" />
-            <marker date="1523657489000" expanded="true" signature="4558:4694" ph="{...}" />
-            <marker date="1523657489000" expanded="true" signature="4589:4677" ph="{...}" />
-            <marker date="1523657489000" expanded="true" signature="4874:5163" ph="{...}" />
-            <marker date="1523657489000" expanded="true" signature="5074:5158" ph="{...}" />
-            <marker date="1523657489000" expanded="true" signature="5226:5562" ph="{...}" />
-            <marker date="1523657489000" expanded="true" signature="5663:5711" ph="{...}" />
-            <marker date="1523657489000" expanded="true" signature="5881:6971" ph="{...}" />
-            <marker date="1523657489000" expanded="true" signature="6105:6968" ph="{...}" />
-            <marker date="1523657489000" expanded="true" signature="6340:6706" ph="{...}" />
-            <marker date="1523657489000" expanded="true" signature="6491:6701" ph="{...}" />
-            <marker date="1523657489000" expanded="true" signature="6641:6695" ph="{...}" />
-            <marker date="1523657489000" expanded="true" signature="7066:8684" ph="{...}" />
-            <marker date="1523657489000" expanded="true" signature="7394:8681" ph="{...}" />
-            <marker date="1523657489000" expanded="true" signature="7729:7869" ph="{...}" />
-            <marker date="1523657489000" expanded="true" signature="8071:8371" ph="{...}" />
+            <marker date="1523657930000" expanded="false" signature="6:137" ph="..." />
+            <marker date="1523657930000" expanded="true" signature="139:434" ph="/* This system should depend on the crowd system, but as systems can depend only on one thing, then all the forma ... */" />
+            <marker date="1523657930000" expanded="true" signature="528:8742" ph="{...}" />
+            <marker date="1523657930000" expanded="true" signature="556:1025" ph="{...}" />
+            <marker date="1523657930000" expanded="true" signature="1347:3845" ph="{...}" />
+            <marker date="1523657930000" expanded="true" signature="1420:1640" ph="/* NativeArrayExtensions.ResizeNativeArray(ref raycastHits, math.max(raycastHits.Length,minions.Length)); ... */" />
+            <marker date="1523657930000" expanded="true" signature="1710:1888" ph="{...}" />
+            <marker date="1523657930000" expanded="true" signature="2176:2238" ph="{...}" />
+            <marker date="1523657930000" expanded="true" signature="2536:2609" ph="{...}" />
+            <marker date="1523657930000" expanded="true" signature="2934:3069" ph="{...}" />
+            <marker date="1523657930000" expanded="true" signature="3246:3440" ph="{...}" />
+            <marker date="1523657930000" expanded="true" signature="3586:3803" ph="/* Pass two, rearrangeing the minion indices ... */" />
+            <marker date="1523657930000" expanded="true" signature="3924:5796" ph="{...}" />
+            <marker date="1523657930000" expanded="true" signature="4254:5793" ph="{...}" />
+            <marker date="1523657930000" expanded="true" signature="4558:4694" ph="{...}" />
+            <marker date="1523657930000" expanded="true" signature="4589:4677" ph="{...}" />
+            <marker date="1523657930000" expanded="true" signature="4874:5163" ph="{...}" />
+            <marker date="1523657930000" expanded="true" signature="5074:5158" ph="{...}" />
+            <marker date="1523657930000" expanded="true" signature="5226:5562" ph="{...}" />
+            <marker date="1523657930000" expanded="true" signature="5663:5711" ph="{...}" />
+            <marker date="1523657930000" expanded="true" signature="5881:7027" ph="{...}" />
+            <marker date="1523657930000" expanded="true" signature="6161:7024" ph="{...}" />
+            <marker date="1523657930000" expanded="true" signature="6396:6762" ph="{...}" />
+            <marker date="1523657930000" expanded="true" signature="6547:6757" ph="{...}" />
+            <marker date="1523657930000" expanded="true" signature="6697:6751" ph="{...}" />
+            <marker date="1523657930000" expanded="true" signature="7122:8740" ph="{...}" />
+            <marker date="1523657930000" expanded="true" signature="7450:8737" ph="{...}" />
+            <marker date="1523657930000" expanded="true" signature="7785:7925" ph="{...}" />
+            <marker date="1523657930000" expanded="true" signature="8127:8427" ph="{...}" />
           </folding>
         </state>
       </provider>
