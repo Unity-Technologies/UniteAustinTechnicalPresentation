@@ -10,12 +10,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="CrowdSystemJobs.cs" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="CrowdSystemJobs.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Navigation/CrowdSystemJobs.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
-              <caret line="245" column="34" lean-forward="false" selection-start-line="245" selection-start-column="18" selection-end-line="245" selection-end-column="35" />
+            <state relative-caret-position="359">
+              <caret line="263" column="34" lean-forward="false" selection-start-line="263" selection-start-column="34" selection-end-line="263" selection-end-column="34" />
               <folding>
                 <marker date="1523495699000" expanded="false" signature="6:179" ph="..." />
                 <marker date="1523495699000" expanded="true" signature="213:13526" ph="{...}" />
@@ -76,21 +76,65 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="FormationSystem.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Systems/FormationSystem.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="139">
+              <caret line="209" column="64" lean-forward="false" selection-start-line="209" selection-start-column="64" selection-end-line="209" selection-end-column="64" />
+              <folding>
+                <marker date="1523657489000" expanded="false" signature="6:137" ph="..." />
+                <marker date="1523657489000" expanded="true" signature="139:434" ph="/* This system should depend on the crowd system, but as systems can depend only on one thing, then all the forma ... */" />
+                <marker date="1523657489000" expanded="true" signature="528:8686" ph="{...}" />
+                <marker date="1523657489000" expanded="true" signature="556:1025" ph="{...}" />
+                <marker date="1523657489000" expanded="true" signature="1347:3845" ph="{...}" />
+                <marker date="1523657489000" expanded="true" signature="1420:1640" ph="/* NativeArrayExtensions.ResizeNativeArray(ref raycastHits, math.max(raycastHits.Length,minions.Length)); ... */" />
+                <marker date="1523657489000" expanded="true" signature="1710:1888" ph="{...}" />
+                <marker date="1523657489000" expanded="true" signature="2176:2238" ph="{...}" />
+                <marker date="1523657489000" expanded="true" signature="2536:2609" ph="{...}" />
+                <marker date="1523657489000" expanded="true" signature="2934:3069" ph="{...}" />
+                <marker date="1523657489000" expanded="true" signature="3246:3440" ph="{...}" />
+                <marker date="1523657489000" expanded="true" signature="3586:3803" ph="/* Pass two, rearrangeing the minion indices ... */" />
+                <marker date="1523657489000" expanded="true" signature="3924:5796" ph="{...}" />
+                <marker date="1523657489000" expanded="true" signature="4254:5793" ph="{...}" />
+                <marker date="1523657489000" expanded="true" signature="4558:4694" ph="{...}" />
+                <marker date="1523657489000" expanded="true" signature="4589:4677" ph="{...}" />
+                <marker date="1523657489000" expanded="true" signature="4874:5163" ph="{...}" />
+                <marker date="1523657489000" expanded="true" signature="5074:5158" ph="{...}" />
+                <marker date="1523657489000" expanded="true" signature="5226:5562" ph="{...}" />
+                <marker date="1523657489000" expanded="true" signature="5663:5711" ph="{...}" />
+                <marker date="1523657489000" expanded="true" signature="5881:6971" ph="{...}" />
+                <marker date="1523657489000" expanded="true" signature="6105:6968" ph="{...}" />
+                <marker date="1523657489000" expanded="true" signature="6340:6706" ph="{...}" />
+                <marker date="1523657489000" expanded="true" signature="6491:6701" ph="{...}" />
+                <marker date="1523657489000" expanded="true" signature="6641:6695" ph="{...}" />
+                <marker date="1523657489000" expanded="true" signature="7066:8684" ph="{...}" />
+                <marker date="1523657489000" expanded="true" signature="7394:8681" ph="{...}" />
+                <marker date="1523657489000" expanded="true" signature="7729:7869" ph="{...}" />
+                <marker date="1523657489000" expanded="true" signature="8071:8371" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>UpdateVelo</find>
+      <find>SearchClos</find>
+      <find>SearchClosestFormations</find>
     </findStrings>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Navigation/CrowdSystemJobs.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Navigation/CrowdSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/FormationSystem.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Navigation/CrowdSystemJobs.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/FormationSystem.cs" />
       </list>
     </option>
   </component>
@@ -120,6 +164,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
@@ -133,7 +178,6 @@
         <option name="show-file-system" value="false" />
         <option name="show-all-items" value="false" />
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -164,12 +208,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1523495668070</updated>
-      <workItem from="1523495670203" duration="403000" />
+      <workItem from="1523495670203" duration="939000" />
+      <workItem from="1523655592284" duration="1903000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="403000" />
+    <option name="totallyTimeSpent" value="2842000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -185,24 +230,24 @@
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25274727" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25579977" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -219,8 +264,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Navigation/CrowdSystemJobs.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="245" column="34" lean-forward="false" selection-start-line="245" selection-start-column="18" selection-end-line="245" selection-end-column="35" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <marker date="1523495699000" expanded="false" signature="6:179" ph="..." />
             <marker date="1523495699000" expanded="true" signature="213:13526" ph="{...}" />
@@ -276,6 +321,107 @@
             <marker date="1523495699000" expanded="true" signature="13081:13226" ph="{...}" />
             <marker date="1523495699000" expanded="true" signature="13284:13524" ph="{...}" />
             <marker date="1523495699000" expanded="true" signature="13422:13518" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Navigation/CrowdSystemJobs.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="263" column="34" lean-forward="false" selection-start-line="263" selection-start-column="34" selection-end-line="263" selection-end-column="34" />
+          <folding>
+            <marker date="1523495699000" expanded="false" signature="6:179" ph="..." />
+            <marker date="1523495699000" expanded="true" signature="213:13526" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="270:917" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="535:911" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="791:901" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="963:4113" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="1530:4107" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="1892:4019" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="2306:3959" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="2372:2757" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="2451:2564" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="2980:3111" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="3213:3548" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="3711:3812" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="4167:5398" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="4410:5392" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="4850:5241" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="4973:5143" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="5164:5227" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="5447:6485" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="5606:6479" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="5718:6469" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="5916:6011" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="6243:6455" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="6537:8811" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="6778:8805" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="7071:7172" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="7277:7438" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="7493:8097" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="7998:8083" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="8185:8474" ph="/* ##if DEBUG_CROWDSYSTEM_ASSERTS ... */" />
+            <marker date="1523495699000" expanded="true" signature="8497:8795" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="8599:8678" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="8895:11630" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="9608:11624" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="9788:10017" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="9848:9979" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="10097:11485" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="10343:11066" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="10733:11048" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="11087:11184" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="11502:11578" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="11684:12526" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="11864:12520" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="12032:12226" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="12092:12212" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="12243:12415" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="12569:12767" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="12685:12761" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="12814:13242" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="13017:13236" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="13081:13226" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="13284:13524" ph="{...}" />
+            <marker date="1523495699000" expanded="true" signature="13422:13518" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Systems/FormationSystem.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="209" column="64" lean-forward="false" selection-start-line="209" selection-start-column="64" selection-end-line="209" selection-end-column="64" />
+          <folding>
+            <marker date="1523657489000" expanded="false" signature="6:137" ph="..." />
+            <marker date="1523657489000" expanded="true" signature="139:434" ph="/* This system should depend on the crowd system, but as systems can depend only on one thing, then all the forma ... */" />
+            <marker date="1523657489000" expanded="true" signature="528:8686" ph="{...}" />
+            <marker date="1523657489000" expanded="true" signature="556:1025" ph="{...}" />
+            <marker date="1523657489000" expanded="true" signature="1347:3845" ph="{...}" />
+            <marker date="1523657489000" expanded="true" signature="1420:1640" ph="/* NativeArrayExtensions.ResizeNativeArray(ref raycastHits, math.max(raycastHits.Length,minions.Length)); ... */" />
+            <marker date="1523657489000" expanded="true" signature="1710:1888" ph="{...}" />
+            <marker date="1523657489000" expanded="true" signature="2176:2238" ph="{...}" />
+            <marker date="1523657489000" expanded="true" signature="2536:2609" ph="{...}" />
+            <marker date="1523657489000" expanded="true" signature="2934:3069" ph="{...}" />
+            <marker date="1523657489000" expanded="true" signature="3246:3440" ph="{...}" />
+            <marker date="1523657489000" expanded="true" signature="3586:3803" ph="/* Pass two, rearrangeing the minion indices ... */" />
+            <marker date="1523657489000" expanded="true" signature="3924:5796" ph="{...}" />
+            <marker date="1523657489000" expanded="true" signature="4254:5793" ph="{...}" />
+            <marker date="1523657489000" expanded="true" signature="4558:4694" ph="{...}" />
+            <marker date="1523657489000" expanded="true" signature="4589:4677" ph="{...}" />
+            <marker date="1523657489000" expanded="true" signature="4874:5163" ph="{...}" />
+            <marker date="1523657489000" expanded="true" signature="5074:5158" ph="{...}" />
+            <marker date="1523657489000" expanded="true" signature="5226:5562" ph="{...}" />
+            <marker date="1523657489000" expanded="true" signature="5663:5711" ph="{...}" />
+            <marker date="1523657489000" expanded="true" signature="5881:6971" ph="{...}" />
+            <marker date="1523657489000" expanded="true" signature="6105:6968" ph="{...}" />
+            <marker date="1523657489000" expanded="true" signature="6340:6706" ph="{...}" />
+            <marker date="1523657489000" expanded="true" signature="6491:6701" ph="{...}" />
+            <marker date="1523657489000" expanded="true" signature="6641:6695" ph="{...}" />
+            <marker date="1523657489000" expanded="true" signature="7066:8684" ph="{...}" />
+            <marker date="1523657489000" expanded="true" signature="7394:8681" ph="{...}" />
+            <marker date="1523657489000" expanded="true" signature="7729:7869" ph="{...}" />
+            <marker date="1523657489000" expanded="true" signature="8071:8371" ph="{...}" />
           </folding>
         </state>
       </provider>

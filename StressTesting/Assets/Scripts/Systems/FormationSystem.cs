@@ -51,6 +51,32 @@ public class FormationSystem : JobComponentSystem
 			navigationData = formations.navigationData,
 			dt = Time.deltaTime
 		};
+		var copyNavigationJobHandle = copyNavigationJob.Schedule(formations.Length, SimulationState.SmallBatchSize, inputDeps);
+
+		var copyFormations = new NativeArray<FormationData>(formations.data.Length, Allocator.TempJob);
+		var copyFormationsJob = new CopyComponentData<FormationData>
+		{
+			Source = formations.data,
+			Results = copyFormations
+		};
+		var copyFormationJobHandle = copyFormationsJob.Schedule(formations.data.Length, SimulationState.HugeBatchSize, copyNavigationJobHandle);
+		
+		var copyFormationEntities = new NativeArray<Entity>(formations.entities.Length, Allocator.TempJob);
+		var copyFormationEntitiesJob = new CopyEntities
+		{
+			Source = formations.entities,
+			Results = copyFormationEntities
+		};
+		var copyFormationEntitiesJobHandle = copyFormationEntitiesJob.Schedule(formations.entities.Length, SimulationState.HugeBatchSize, copyNavigationJobHandle);
+		var copyBarrier = JobHandle.CombineDependencies(copyFormationJobHandle, copyFormationEntitiesJobHandle);
+		
+		var closestSearchJob = new SearchClosestFormations
+		{
+			formations = copyFormations,
+			closestFormations = formations.closestFormations,
+			formationEntities = copyFormationEntities
+		};
+		var closestSearchJobHandle = closestSearchJob.Schedule(formations.Length, SimulationState.HugeBatchSize, copyBarrier);
 		
 		var updateFormationsJob = new UpdateFormations
 		{
@@ -59,39 +85,24 @@ public class FormationSystem : JobComponentSystem
 			formationHighLevelPath = formations.highLevelPaths,
 			formations = formations.data,
 		};
-
-		var closestSearchJob = new SearchClosestFormations
-		{
-			formations = formations.data,
-			closestFormations = formations.closestFormations,
-			formationEntities = formations.entities
-		};
+		var updateFormationsJobHandle = updateFormationsJob.Schedule(formations.Length, SimulationState.SmallBatchSize, closestSearchJobHandle);
 		
-		// ==== Schedule Formation jobs ======
-		var copyJobFence = copyNavigationJob.Schedule(formations.Length, SimulationState.SmallBatchSize, inputDeps);
-		var closestSearchFence = closestSearchJob.Schedule(formations.Length, SimulationState.HugeBatchSize, copyJobFence);
-		
-		var updateFormationsFence = updateFormationsJob.Schedule(formations.Length, SimulationState.SmallBatchSize,
-			closestSearchFence);
 		// Pass two, rearrangeing the minion indices
 		// TODO Split this system into systems that make sense 
 		
-		//AddDependency(rearrangeFence);
-
 		// calculate formation movement
 		// advance formations
 		// calculate minion position and populate the array
-		return updateFormationsFence;
+		
+		return updateFormationsJobHandle;
 	}
 	
 	[ComputeJobOptimization]
 	private struct UpdateFormations : IJobParallelFor
 	{
 		public ComponentDataArray<FormationData> formations;
-		[ReadOnly]
-		public ComponentDataArray<FormationClosestData> closestFormations;
-		[ReadOnly]
-		public ComponentDataArray<FormationHighLevelPath> formationHighLevelPath;
+		[ReadOnly] public ComponentDataArray<FormationClosestData> closestFormations;
+		[ReadOnly] public ComponentDataArray<FormationHighLevelPath> formationHighLevelPath;
 
 		public ComponentDataArray<CrowdAgentNavigator> formationNavigators;
 
@@ -155,10 +166,8 @@ public class FormationSystem : JobComponentSystem
 	[ComputeJobOptimization]
 	private struct SearchClosestFormations : IJobParallelFor
 	{
-		[ReadOnly]
-		public ComponentDataArray<FormationData> formations;
-		[ReadOnly]
-		public EntityArray formationEntities;
+		[ReadOnly] public NativeArray<FormationData> formations;
+		[ReadOnly] public NativeArray<Entity> formationEntities;
 		public ComponentDataArray<FormationClosestData> closestFormations;
 
 		public void Execute(int index)
