@@ -2,9 +2,7 @@
 
 ![Unity](https://github.com/Unity-Technologies/UniteAustinTechnicalPresentation/blob/master/WelcomeImage.png)
 
-### You can find the build required to run this presentation here
-
-https://unity3d.com/performance-by-default
+### This sample is compatible with Unity 2018.1
 
 ### To run the presentation
 * Open "StressTesting" project 
