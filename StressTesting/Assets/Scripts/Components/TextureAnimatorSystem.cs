@@ -232,7 +232,7 @@ public class TextureAnimatorSystem : JobComponentSystem
 		[ReadOnly]
 		public NativeArray<IntPtr> BufferPointers;
 
-		public void Execute(int i)
+		public unsafe void Execute(int i)
 		{
 			var unitTransform = unitTransformData[i];
 			float distance = math.length(CameraPosition - unitTransform.Position);
@@ -249,52 +249,52 @@ public class TextureAnimatorSystem : JobComponentSystem
 				int writeIndex = BufferCounterLod0.Increment();
 
 				//unitPositions[writeIndex] = unitTransform.Position;
-				UnsafeUtility.WriteArrayElement(BufferPointers[0], writeIndex, position);
+				UnsafeUtility.WriteArrayElement((void*) BufferPointers[0], writeIndex, position);
 
 				//unitRotations[writeIndex] = Quaternion.LookRotation(unitTransform.Forward, new Vector3(0.0f, 1.0f, 0.0f) /* Vector3.up */);
-				UnsafeUtility.WriteArrayElement(BufferPointers[1], writeIndex, rotation);
+				UnsafeUtility.WriteArrayElement((void*) BufferPointers[1], writeIndex, rotation);
 
 				//textureCoordinates[writeIndex] = animationData[i].AnimationNormalizedTime * clip.TextureRange + clip.TextureOffset;
-				UnsafeUtility.WriteArrayElement(BufferPointers[2], writeIndex, texturePosition);
+				UnsafeUtility.WriteArrayElement((void*) BufferPointers[2], writeIndex, texturePosition);
 			}
 			else if (distance < DistanceMaxLod1)
 			{
 				int writeIndex = BufferCounterLod1.Increment();
 
 				//unitPositions[writeIndex] = unitTransform.Position;
-				UnsafeUtility.WriteArrayElement(BufferPointers[3], writeIndex, position);
+				UnsafeUtility.WriteArrayElement((void*) BufferPointers[3], writeIndex, position);
 
 				//unitRotations[writeIndex] = Quaternion.LookRotation(unitTransform.Forward, new Vector3(0.0f, 1.0f, 0.0f) /* Vector3.up */);
-				UnsafeUtility.WriteArrayElement(BufferPointers[4], writeIndex, rotation);
+				UnsafeUtility.WriteArrayElement((void*) BufferPointers[4], writeIndex, rotation);
 
 				//textureCoordinates[writeIndex] = animationData[i].AnimationNormalizedTime * clip.TextureRange + clip.TextureOffset;
-				UnsafeUtility.WriteArrayElement(BufferPointers[5], writeIndex, texturePosition);
+				UnsafeUtility.WriteArrayElement((void*) BufferPointers[5], writeIndex, texturePosition);
 			}
 			else if (distance < DistanceMaxLod2)
 			{
 				int writeIndex = BufferCounterLod2.Increment();
 
 				//unitPositions[writeIndex] = unitTransform.Position;
-				UnsafeUtility.WriteArrayElement(BufferPointers[6], writeIndex, position);
+				UnsafeUtility.WriteArrayElement((void*) BufferPointers[6], writeIndex, position);
 
 				//unitRotations[writeIndex] = Quaternion.LookRotation(unitTransform.Forward, new Vector3(0.0f, 1.0f, 0.0f) /* Vector3.up */);
-				UnsafeUtility.WriteArrayElement(BufferPointers[7], writeIndex, rotation);
+				UnsafeUtility.WriteArrayElement((void*) BufferPointers[7], writeIndex, rotation);
 
 				//textureCoordinates[writeIndex] = animationData[i].AnimationNormalizedTime * clip.TextureRange + clip.TextureOffset;
-				UnsafeUtility.WriteArrayElement(BufferPointers[8], writeIndex, texturePosition);
+				UnsafeUtility.WriteArrayElement((void*) BufferPointers[8], writeIndex, texturePosition);
 			}
 			else
 			{
 				int writeIndex = BufferCounterLod3.Increment();
 
 				//unitPositions[writeIndex] = unitTransform.Position;
-				UnsafeUtility.WriteArrayElement(BufferPointers[9], writeIndex, position);
+				UnsafeUtility.WriteArrayElement((void*) BufferPointers[9], writeIndex, position);
 
 				//unitRotations[writeIndex] = Quaternion.LookRotation(unitTransform.Forward, new Vector3(0.0f, 1.0f, 0.0f) /* Vector3.up */);
-				UnsafeUtility.WriteArrayElement(BufferPointers[10], writeIndex, rotation);
+				UnsafeUtility.WriteArrayElement((void*) BufferPointers[10], writeIndex, rotation);
 
 				//textureCoordinates[writeIndex] = animationData[i].AnimationNormalizedTime * clip.TextureRange + clip.TextureOffset;
-				UnsafeUtility.WriteArrayElement(BufferPointers[11], writeIndex, texturePosition);
+				UnsafeUtility.WriteArrayElement((void*) BufferPointers[11], writeIndex, texturePosition);
 			}
 		}
 	}
@@ -688,11 +688,12 @@ public class TextureAnimatorSystem : JobComponentSystem
 
 #if !USE_SAFE_JOBS
 [NativeContainer]
-public struct IntHolder
+public struct IntHolder : IDisposable
 {
 #if ENABLE_UNITY_COLLECTIONS_CHECKS
-	public AtomicSafetyHandle m_Safety;
-	public DisposeSentinel m_DisposeSentinel;
+	internal AtomicSafetyHandle m_Safety;
+	[NativeSetClassTypeToNullOnSchedule]
+	internal DisposeSentinel m_DisposeSentinel;
 #endif
 
 	[NativeContainer]
@@ -707,6 +708,7 @@ public struct IntHolder
 		public int Integer;
 	}
 
+	[NativeDisableUnsafePtrRestriction]
 	public IntPtr Data;
 
 	public bool IsCreated { get { return Data != IntPtr.Zero; } }
@@ -716,12 +718,12 @@ public struct IntHolder
 	public unsafe IntHolder(Allocator allocator)
 	{
 		this.allocator = allocator;
-		Data = UnsafeUtility.Malloc(sizeof(HolderData), 4, this.allocator);
-		((HolderData*)Data)->InnerData = UnsafeUtility.Malloc((ulong)sizeof(InnerData), 4, this.allocator);
+		Data = (IntPtr) UnsafeUtility.Malloc(sizeof(HolderData), 4, this.allocator);
+		((HolderData*)Data)->InnerData = (IntPtr) UnsafeUtility.Malloc(sizeof(InnerData), 4, this.allocator);
 		((InnerData*)((HolderData*)Data)->InnerData)->Integer = -1;
 
 #if ENABLE_UNITY_COLLECTIONS_CHECKS
-		DisposeSentinel.Create(Data, this.allocator, out m_Safety, out m_DisposeSentinel, 0, Deallocate);
+		DisposeSentinel.Create(out m_Safety, out m_DisposeSentinel, 0);
 #endif
 	}
 
@@ -739,9 +741,9 @@ public struct IntHolder
 	{
 		HolderData* holderData = (HolderData*)data;
 
-		UnsafeUtility.Free(holderData->InnerData, alloc);
+		UnsafeUtility.Free((void*) holderData->InnerData, alloc);
 		holderData->InnerData = IntPtr.Zero;
-		UnsafeUtility.Free(data, alloc);
+		UnsafeUtility.Free((void*) data, alloc);
 	}
 
 	public unsafe int Increment()
@@ -791,9 +793,9 @@ public class InstancedSkinningDrawer : IDisposable
 	private ComputeBuffer objectPositionsBuffer;
 
 #if !USE_SAFE_JOBS
-	public NativeArray<float> TextureCoordinates;
+	public NativeArray<float3> TextureCoordinates;
 	public NativeArray<float4> ObjectPositions;
-	public NativeArray<quaternion> ObjectRotations;
+	public NativeArray<float4> ObjectRotations;
 
 	public NativeArray<IntPtr> BufferPointers;
 	public IntHolder BufferCounter;
@@ -841,9 +843,9 @@ public class InstancedSkinningDrawer : IDisposable
 #if !USE_SAFE_JOBS
 		BufferPointers = new NativeArray<IntPtr>(3, Allocator.Persistent);
 
-		BufferPointers[0] = ObjectPositions.GetUnsafeBufferPointerWithoutChecks();
-		BufferPointers[1] = ObjectRotations.GetUnsafeBufferPointerWithoutChecks();
-		BufferPointers[2] = TextureCoordinates.GetUnsafeBufferPointerWithoutChecks();
+		BufferPointers[0] = (IntPtr) NativeArrayUnsafeUtility.GetUnsafeBufferPointerWithoutChecks(ObjectPositions);
+		BufferPointers[1] = (IntPtr) NativeArrayUnsafeUtility.GetUnsafeBufferPointerWithoutChecks(ObjectRotations);
+		BufferPointers[2] = (IntPtr) NativeArrayUnsafeUtility.GetUnsafeBufferPointerWithoutChecks(TextureCoordinates);
 		BufferCounter = new IntHolder(Allocator.Persistent);
 #endif
 
