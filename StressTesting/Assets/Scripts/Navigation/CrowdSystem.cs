@@ -307,6 +307,8 @@ public partial class CrowdSystem : JobComponentSystem
             uniqueIdStore = m_UniqueIdStore
         };
         var afterRequestsCreated = makeRequestsJob.Schedule(inputDeps);
+        var navMeshWorld = NavMeshWorld.GetDefaultWorld();
+        navMeshWorld.AddDependency(afterRequestsCreated);
 
         var afterRequestsMovedToQueries = afterRequestsCreated;
         if (m_QueryQueues.Length > 0)
@@ -321,6 +323,7 @@ public partial class CrowdSystem : JobComponentSystem
                     queryQueue = queue
                 };
                 afterRequestsMovedToQueries = enqueuingJob.Schedule(afterRequestsMovedToQueries);
+                navMeshWorld.AddDependency(afterRequestsMovedToQueries);
             }
         }
 
@@ -338,6 +341,7 @@ public partial class CrowdSystem : JobComponentSystem
                 continue;
 
             m_AfterQueriesProcessed[i] = m_QueryJobs[i].Schedule(afterRequestsMovedToQueries);
+            navMeshWorld.AddDependency(m_AfterQueriesProcessed[i]);
             queriesScheduled++;
         }
         var afterQueriesProcessed = queriesScheduled > 0 ? JobHandle.CombineDependencies(m_AfterQueriesProcessed) : afterRequestsMovedToQueries;
@@ -347,6 +351,7 @@ public partial class CrowdSystem : JobComponentSystem
         {
             var resultsJob = new ApplyQueryResultsJob { queryQueue = queue, paths = m_Crowd.paths, agentNavigators = m_Crowd.agentNavigators };
             afterPathsAdded = resultsJob.Schedule(afterPathsAdded);
+            navMeshWorld.AddDependency(afterPathsAdded);
         }
 
         var advance = new AdvancePathJob { agents = m_Crowd.agents, agentNavigators = m_Crowd.agentNavigators, paths = m_Crowd.paths };
@@ -365,9 +370,11 @@ public partial class CrowdSystem : JobComponentSystem
             vertexSide = new NativeArray<float>(totalCornersBuffer, Allocator.TempJob)
         };
         var afterVelocitiesUpdated = vel.Schedule(m_Crowd.agents.Length, k_AgentsBatchSize, afterPathsTrimmed);
+        navMeshWorld.AddDependency(afterVelocitiesUpdated);
 
         var move = new MoveLocationsJob { query = m_NavMeshQuery, agents = m_Crowd.agents, dt = Time.deltaTime };
         var afterAgentsMoved = move.Schedule(m_Crowd.agents.Length, k_AgentsBatchSize, afterVelocitiesUpdated);
+        navMeshWorld.AddDependency(afterAgentsMoved);
 
 #if DEBUG_CROWDSYSTEM_LOGS
         if (dbgPrintRequests)
@@ -387,9 +394,8 @@ public partial class CrowdSystem : JobComponentSystem
             };
             cleanupFence = queryCleanupJob.Schedule(cleanupFence);
             m_AfterQueriesCleanup = cleanupFence;
+            navMeshWorld.AddDependency(cleanupFence);
         }
-
-        //NavMeshWorld.GetDefaultWorld().AddDependency(afterAgentsMoved);
 
         return afterAgentsMoved;
     }

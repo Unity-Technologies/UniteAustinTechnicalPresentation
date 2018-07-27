@@ -156,6 +156,8 @@ public class FormationPathFindSystem : JobComponentSystem
 
         //Debug.Assert(queryIndexFree.Length + queryIndexUsed.Length == MaxNavMeshQueries);
 
+        var navMeshWorld = NavMeshWorld.GetDefaultWorld();
+
         newPathQueries.Clear();
         var findHandle = inputDeps;
         for (int i = 0; i < findingEntities.Length; ++i)
@@ -178,16 +180,18 @@ public class FormationPathFindSystem : JobComponentSystem
             };
             // TODO: figure out how to run these in parallel, they write to different parts of the same array
             findHandle = pathFind.Schedule(findHandle);
+            navMeshWorld.AddDependency(findHandle);
         }
         if (findingEntities.Length > 0)
         {
-            var navMeshWorld = NavMeshWorld.GetDefaultWorld();
             navMeshWorld.AddDependency(findHandle);
         }
         Profiler.EndSample();
 
         var pathFindFence = pathFollow.Schedule(minions.Length, SimulationState.BigBatchSize, findHandle); // prepare targets fence?
         var assignFence = assign.Schedule(formations.Length, SimulationState.BigBatchSize, inputDeps);
+
+        navMeshWorld.AddDependency(pathFindFence);
 
         return JobHandle.CombineDependencies(assignFence, pathFindFence);
     }
