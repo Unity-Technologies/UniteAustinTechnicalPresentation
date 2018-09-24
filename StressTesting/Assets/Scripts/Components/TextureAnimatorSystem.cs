@@ -1,4 +1,4 @@
-#define USE_SAFE_JOBS
+﻿#define USE_SAFE_JOBS
 
 using System;
 using System.Collections.Generic;
@@ -152,7 +152,7 @@ public class TextureAnimatorSystem : JobComponentSystem
 
 	#region Jobs
 
-	[ComputeJobOptimization]
+	[Unity.Burst.BurstCompile]
 	struct PrepareAnimatorDataJob : IJobParallelFor
 	{
 		public ComponentDataArray<TextureAnimatorData> textureAnimatorData;
@@ -189,7 +189,7 @@ public class TextureAnimatorSystem : JobComponentSystem
 	}
 
 #if !USE_SAFE_JOBS
-	[ComputeJobOptimization]
+	[Unity.Burst.BurstCompile]
 	struct CullAndComputeParameters : IJobParallelFor
 	{
 		[ReadOnly]
@@ -301,7 +301,7 @@ public class TextureAnimatorSystem : JobComponentSystem
 #endif
 
 #if USE_SAFE_JOBS
-	[ComputeJobOptimization]
+	[Unity.Burst.BurstCompile]
 	struct CullAndComputeParametersSafe : IJob
 	{
 		[ReadOnly]

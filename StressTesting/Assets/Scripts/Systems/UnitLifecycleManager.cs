@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using Unity.Entities;
 using Assets.Instancing.Skinning.Scripts.ECS;
@@ -240,7 +240,7 @@ public class UnitLifecycleManager : JobComponentSystem
 		return new JobHandle();
 	}
 
-	[ComputeJobOptimization]
+	[Unity.Burst.BurstCompile]
 	private struct CleanupJob : IJobParallelFor
 	{
 		[ReadOnly]
@@ -259,7 +259,7 @@ public class UnitLifecycleManager : JobComponentSystem
 		}
 	}
 
-	[ComputeJobOptimization]
+	[Unity.Burst.BurstCompile]
 	private struct MoveUnitsBelowGround : IJobParallelFor
 	{
 		[ReadOnly]

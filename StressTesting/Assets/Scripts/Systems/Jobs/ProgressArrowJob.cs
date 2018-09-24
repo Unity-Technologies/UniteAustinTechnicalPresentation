@@ -4,7 +4,7 @@ using Unity.Mathematics;
 using UnityEngine;
 using Unity.Entities;
 
-//[ComputeJobOptimization]
+//[Unity.Burst.BurstCompile]
 public struct ProgressArrowJob : IJobParallelFor
 {
 	public ComponentDataArray<ArrowData> arrows;

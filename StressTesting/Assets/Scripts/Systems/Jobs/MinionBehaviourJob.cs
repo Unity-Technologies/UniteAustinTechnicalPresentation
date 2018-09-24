@@ -5,7 +5,7 @@ using UnityEngine;
 using Unity.Entities;
 using UnityEngine.Experimental.AI;
 
-[ComputeJobOptimization]
+[Unity.Burst.BurstCompile]
 public struct MinionBehaviourJob : IJobParallelForBatch
 {
 	[ReadOnly]

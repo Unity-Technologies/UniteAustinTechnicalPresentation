@@ -1,4 +1,4 @@
-using Unity.Collections;
+﻿using Unity.Collections;
 using Unity.Jobs;
 using Unity.Mathematics;
 using UnityEngine;
@@ -97,7 +97,7 @@ public class ArrowRenderSystem : JobComponentSystem
 		return calculateMatricesFence;
 	}
 
-	[ComputeJobOptimization]
+	[Unity.Burst.BurstCompile]
 	private struct CalculateArrowTransformationMatrix : IJobParallelFor
 	{
 		[ReadOnly]

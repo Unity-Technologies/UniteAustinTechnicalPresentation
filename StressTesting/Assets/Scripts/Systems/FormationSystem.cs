@@ -1,4 +1,4 @@
-using Unity.Collections;
+﻿using Unity.Collections;
 using Unity.Jobs;
 using Unity.Mathematics;
 using UnityEngine;
@@ -97,7 +97,7 @@ public class FormationSystem : JobComponentSystem
 		return updateFormationsJobHandle;
 	}
 	
-	[ComputeJobOptimization]
+	[Unity.Burst.BurstCompile]
 	private struct UpdateFormations : IJobParallelFor
 	{
 		public ComponentDataArray<FormationData> formations;
@@ -163,7 +163,7 @@ public class FormationSystem : JobComponentSystem
 		}
 	}
 
-	[ComputeJobOptimization]
+	[Unity.Burst.BurstCompile]
 	private struct SearchClosestFormations : IJobParallelFor
 	{
 		[DeallocateOnJobCompletion] [ReadOnly] public NativeArray<FormationData> formations;
@@ -199,7 +199,7 @@ public class FormationSystem : JobComponentSystem
 		}
 	}
 
-	[ComputeJobOptimization]
+	[Unity.Burst.BurstCompile]
 	private struct CopyNavigationPositionToFormation : IJobParallelFor
 	{
 		public ComponentDataArray<FormationData> formations;

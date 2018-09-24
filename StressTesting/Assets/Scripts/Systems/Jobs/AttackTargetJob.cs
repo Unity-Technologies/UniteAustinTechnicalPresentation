@@ -2,7 +2,7 @@
 using Unity.Jobs;
 using Unity.Entities;
 
-[ComputeJobOptimization]
+[Unity.Burst.BurstCompile]
 public struct AttackTargetJob : IJobParallelFor
 {
 	[ReadOnly]

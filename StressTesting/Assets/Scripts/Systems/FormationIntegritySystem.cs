@@ -1,4 +1,4 @@
-using Unity.Collections;
+﻿using Unity.Collections;
 using Unity.Jobs;
 using Unity.Mathematics;
 using Unity.Entities;
@@ -46,7 +46,7 @@ public class FormationIntegritySystem : JobComponentSystem
         return CalculateIntegrityFence;
     }
 
-    [ComputeJobOptimization]
+    [Unity.Burst.BurstCompile]
     private struct CalculateIntegrityDataJob : IJobParallelFor
     {
         public ComponentDataArray<FormationIntegrityData> formationIntegrityData;

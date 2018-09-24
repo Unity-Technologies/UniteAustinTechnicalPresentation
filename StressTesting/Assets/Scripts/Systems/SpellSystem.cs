@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using Unity.Entities;
 using System.Collections.Generic;
 using Unity.Collections;
@@ -188,7 +188,7 @@ public class SpellSystem : JobComponentSystem
 		public float randomHorizontal;
 	}
 
-	[ComputeJobOptimization]
+	[Unity.Burst.BurstCompile]
 	public struct ApplyExplosionJob : IJobParallelFor
 	{
 		[ReadOnly]

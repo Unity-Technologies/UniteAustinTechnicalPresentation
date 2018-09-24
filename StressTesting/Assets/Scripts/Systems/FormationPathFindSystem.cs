@@ -1,4 +1,4 @@
-using Unity.Collections;
+﻿using Unity.Collections;
 using Unity.Jobs;
 using Unity.Mathematics;
 using UnityEngine;
@@ -202,7 +202,7 @@ public class FormationPathFindSystem : JobComponentSystem
         return JobHandle.CombineDependencies(assignFence, pathFindFence);
     }
 
-    [ComputeJobOptimization]
+    [Unity.Burst.BurstCompile]
     private struct MinionPathFind : IJob
     {
         public NavMeshQuery query;
@@ -308,7 +308,7 @@ public class FormationPathFindSystem : JobComponentSystem
             pathsInfo[entity] = pathInfo;
         }
     }
-    [ComputeJobOptimization]
+    [Unity.Burst.BurstCompile]
     private struct MinionFollowPath : IJobParallelFor
     {
         [ReadOnly]
@@ -378,7 +378,7 @@ public class FormationPathFindSystem : JobComponentSystem
         }
     }
 
-    [ComputeJobOptimization]
+    [Unity.Burst.BurstCompile]
     private struct AssignFormationSpeed : IJobParallelFor
     {
         [ReadOnly]

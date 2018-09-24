@@ -5,7 +5,7 @@ using UnityEngine;
 using Unity.Entities;
 using UnityEngine.Experimental.AI;
 
-[ComputeJobOptimization]
+[Unity.Burst.BurstCompile]
 public struct MinionBehaviourSyncbackJob : IJobParallelForBatch
 {
 	public ComponentDataArray<UnitTransformData> transforms;

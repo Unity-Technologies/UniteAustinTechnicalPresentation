@@ -3,7 +3,7 @@ using Unity.Jobs;
 using Unity.Mathematics;
 using Unity.Entities;
 
-[ComputeJobOptimization]
+[Unity.Burst.BurstCompile]
 public struct PrepareBucketsJob : IJob
 {
 
@@ -27,7 +27,7 @@ public struct PrepareBucketsJob : IJob
 	}
 }
 
-[ComputeJobOptimization]
+[Unity.Burst.BurstCompile]
 public struct PrepareMinionCollisionJob : IJobParallelFor
 {
 	[ReadOnly]
@@ -51,7 +51,7 @@ public struct PrepareMinionCollisionJob : IJobParallelFor
 }
 
 
-[ComputeJobOptimization]
+[Unity.Burst.BurstCompile]
 public struct MinionCollisionJob : IJobParallelFor
 {
 	[ReadOnly]

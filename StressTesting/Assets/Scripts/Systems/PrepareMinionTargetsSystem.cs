@@ -1,4 +1,4 @@
-using Unity.Collections;
+﻿using Unity.Collections;
 using Unity.Jobs;
 using Unity.Mathematics;
 using Unity.Entities;
@@ -45,7 +45,7 @@ public class PrepareMinionTargetsSystem : JobComponentSystem
         return PrepareTargetsFence;
     }
 
-    [ComputeJobOptimization]
+    [Unity.Burst.BurstCompile]
     private struct PrepareMinonTargets : IJobParallelFor
     {
         [ReadOnly]

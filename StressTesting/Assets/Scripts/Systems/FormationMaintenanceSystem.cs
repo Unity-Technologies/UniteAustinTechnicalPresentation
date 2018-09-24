@@ -1,4 +1,4 @@
-using Unity.Collections;
+﻿using Unity.Collections;
 using Unity.Jobs;
 using Unity.Mathematics;
 using Unity.Entities;
@@ -60,7 +60,7 @@ public class FormationMaintenanceSystem : JobComponentSystem
 		return rearrangeFence;
 	}
 
-	[ComputeJobOptimization]
+	[Unity.Burst.BurstCompile]
 	private struct ClearUnitDataJob : IJobParallelFor
 	{
 		[ReadOnly]
@@ -79,7 +79,7 @@ public class FormationMaintenanceSystem : JobComponentSystem
 		}
 	}
 
-	[ComputeJobOptimization]
+	[Unity.Burst.BurstCompile]
 	private struct FillUnitDataJob : IJob // this can't be parallel job because of FromEntity does not support parallel writing
 	{
 		public BufferFromEntity<EntityRef> formationUnitData;
@@ -103,7 +103,7 @@ public class FormationMaintenanceSystem : JobComponentSystem
 		}
 	}
 
-	[ComputeJobOptimization]
+	[Unity.Burst.BurstCompile]
 	private struct RearrangeUnitIndexesJob : IJobParallelFor
 	{
 		[ReadOnly]
