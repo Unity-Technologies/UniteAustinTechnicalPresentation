@@ -36,7 +36,7 @@ public struct ProgressArrowJob : IJobParallelFor
 		var arrow = arrows[index];
 
 		// Check if the arrow is fired
-		if (arrow.active)
+		if (arrow.active != 0)
 		{
 			arrow.position += arrow.velocity * dt;
 			arrow.velocity.y += SimulationState.Gravity * dt;
@@ -64,7 +64,7 @@ public struct ProgressArrowJob : IJobParallelFor
 						AttackCommands.Enqueue(new AttackCommand(arrowEntities[index], minionEntities[i], 34));
 
 						// Send it to the end of the earth
-						arrow.active = false;
+						arrow.active = 0;
 						arrow.position = Vector3.one * -1000000;
 						queueForKillingEntities.Enqueue(arrowEntities[index]);
 
@@ -75,7 +75,7 @@ public struct ProgressArrowJob : IJobParallelFor
 				found = buckets.TryGetNextValue(out i, ref iterator);
 			}
 
-			if (arrow.active)
+			if (arrow.active != 0)
 			{
 				raycastCommands[index] = RaycastHelper.CreateRaycastCommand(arrow.position);
 			}

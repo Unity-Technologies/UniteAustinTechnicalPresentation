@@ -1,4 +1,4 @@
-#define USE_SAFE_JOBS
+﻿#define USE_SAFE_JOBS
 
 using System;
 using System.Collections.Generic;
@@ -68,7 +68,7 @@ public class TextureAnimatorSystem : JobComponentSystem
 		public int TextureWidth;
 
 		public float AnimationLength;
-		public bool1 Looping;
+		public byte Looping;
 	}
 
 	#region Per unit type tuples
@@ -178,7 +178,7 @@ public class TextureAnimatorSystem : JobComponentSystem
 			float normalizedTime = textureAnimatorData[i].AnimationNormalizedTime + dt / clip.AnimationLength;
 			if (normalizedTime > 1.0f)
 			{
-				if (clip.Looping) normalizedTime = normalizedTime % 1.0f;
+				if (clip.Looping != 0) normalizedTime = normalizedTime % 1.0f;
 				else normalizedTime = 1f;
 			}
 
@@ -471,7 +471,7 @@ public class TextureAnimatorSystem : JobComponentSystem
 			AnimationClipDataBaked data = new AnimationClipDataBaked();
 			data.AnimationLength = bakedData.Animations[i].Clip.length;
 			GetTextureRangeAndOffset(bakedData, bakedData.Animations[i], out data.TextureRange, out data.TextureOffset, out data.OnePixelOffset, out data.TextureWidth);
-			data.Looping = bakedData.Animations[i].Clip.wrapMode == WrapMode.Loop;
+			data.Looping = (byte)(bakedData.Animations[i].Clip.wrapMode == WrapMode.Loop ? 1 : 0);
 			animationClipData[(int)type * 25 + i] = data;
 		}
 	}

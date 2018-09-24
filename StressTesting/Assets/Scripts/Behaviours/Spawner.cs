@@ -80,11 +80,11 @@ public class Spawner : MonoBehaviour
 
 		var crowd = new CrowdAgentNavigator()
 		{
-			active = true,
-			newDestinationRequested = false,
-			goToDestination = false,
-			destinationInView = false,
-			destinationReached = true,
+			active = 1,
+			newDestinationRequested = 0,
+			goToDestination = 0,
+			destinationInView = 0,
+			destinationReached = 1,
 		};
 		entityManager.AddComponentData(formationEntity, crowd);
 

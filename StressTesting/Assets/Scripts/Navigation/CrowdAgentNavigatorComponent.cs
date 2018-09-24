@@ -13,23 +13,23 @@ public struct CrowdAgentNavigator : IComponentData
     public float speed;
     public float nextCornerSide;
     public float3 steeringTarget;
-    public bool1 newDestinationRequested;
-    public bool1 goToDestination;
-    public bool1 destinationInView;
-    public bool1 destinationReached;
-    public bool1 active;
+    public byte newDestinationRequested;
+    public byte goToDestination;
+    public byte destinationInView;
+    public byte destinationReached;
+    public byte active;
 
     public void MoveTo(float3 dest)
     {
         requestedDestination = dest;
-        newDestinationRequested = true;
+        newDestinationRequested = 1;
     }
 
     public void StartMoving()
     {
-        goToDestination = true;
-        destinationInView = false;
-        destinationReached = false;
+        goToDestination = 1;
+        destinationInView = 0;
+        destinationReached = 0;
         distanceToDestination = -1f;
     }
 }

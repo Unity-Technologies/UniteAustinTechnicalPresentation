@@ -9,7 +9,7 @@ public struct ArrowData : IComponentData
 	public float3 position;
 	public float3 velocity;
 
-	public bool1 active;
+	public byte active;
 	public int IsFriendly;
 }
  

@@ -16,12 +16,12 @@ public partial class CrowdSystem
         [ReadOnly]
         public NativeArray<uint> pathRequestIdForAgent;
 
-        public NativeArray<bool1> planPathForAgent;
+        public NativeArray<byte> planPathForAgent;
 
         public void Execute(int index)
         {
             var agentNavigator = agentNavigators[index];
-            if (planPathForAgent[index] || index >= agentNavigators.Length)
+            if (planPathForAgent[index] != 0 || index >= agentNavigators.Length)
                 return;
 
             if (pathRequestIdForAgent[index] == PathQueryQueueEcs.RequestEcs.invalidId)
@@ -40,7 +40,7 @@ public partial class CrowdSystem
 
         public ComponentDataArray<CrowdAgentNavigator> agentNavigators;
 
-        public NativeArray<bool1> planPathForAgent;
+        public NativeArray<byte> planPathForAgent;
         public NativeArray<uint> pathRequestIdForAgent;
         public NativeArray<PathQueryQueueEcs.RequestEcs> pathRequests;
         public NativeArray<int> pathRequestsRange;
@@ -63,16 +63,16 @@ public partial class CrowdSystem
 
                 var index = (i + firstAgent) % agents.Length;
                 var agentNavigator = agentNavigators[index];
-                if (planPathForAgent.Length > 0 && planPathForAgent[index] ||
-                    agentNavigator.newDestinationRequested && pathRequestIdForAgent[index] == PathQueryQueueEcs.RequestEcs.invalidId)
+                if (planPathForAgent.Length > 0 && planPathForAgent[index] != 0 ||
+                    agentNavigator.newDestinationRequested != 0 && pathRequestIdForAgent[index] == PathQueryQueueEcs.RequestEcs.invalidId)
                 {
-                    if (!agentNavigator.active)
+                    if (agentNavigator.active == 0)
                     {
                         if (planPathForAgent.Length > 0)
                         {
-                            planPathForAgent[index] = false;
+                            planPathForAgent[index] = 0;
                         }
-                        agentNavigator.newDestinationRequested = false;
+                        agentNavigator.newDestinationRequested = 0;
                         agentNavigators[index] = agentNavigator;
                         continue;
                     }
@@ -99,9 +99,9 @@ public partial class CrowdSystem
                     uniqueIdStore[0]++;
                     if (planPathForAgent.Length > 0)
                     {
-                        planPathForAgent[index] = false;
+                        planPathForAgent[index] = 0;
                     }
-                    agentNavigator.newDestinationRequested = false;
+                    agentNavigator.newDestinationRequested = 0;
                     agentNavigators[index] = agentNavigator;
                 }
                 currentAgentIndex[0] = index;
@@ -190,7 +190,7 @@ public partial class CrowdSystem
         public void Execute(int index)
         {
             var agentNavigator = agentNavigators[index];
-            if (!agentNavigator.active)
+            if (agentNavigator.active == 0)
                 return;
 
             var path = paths[index];
@@ -208,20 +208,21 @@ public partial class CrowdSystem
                 agentNavigator.MoveTo(agentNavigator.requestedDestination);
                 agentNavigators[index] = agentNavigator;
             }
-            else if (agentNavigator.destinationInView)
+            else if (agentNavigator.destinationInView != 0)
             {
                 var distToDest = math.distance(agLoc.position, agentNavigator.pathEnd.position );
                 var stoppingDistance = 0.1f;
-                agentNavigator.destinationReached = distToDest < stoppingDistance;
+                agentNavigator.destinationReached = (byte)(distToDest < stoppingDistance ? 1 : 0);
                 agentNavigator.distanceToDestination = distToDest;
-                agentNavigator.goToDestination &= !agentNavigator.destinationReached;
+                if (agentNavigator.destinationReached != 0)
+                    agentNavigator.goToDestination = 0;
                 agentNavigators[index] = agentNavigator;
-                if (agentNavigator.destinationReached)
+                if (agentNavigator.destinationReached != 0)
                 {
                     i = agentNavigator.pathSize;
                 }
             }
-            if (i == 0 && !agentNavigator.destinationReached)
+            if (i == 0 && agentNavigator.destinationReached == 0)
                 return;
 
 //#if DEBUG_CROWDSYSTEM_ASSERTS
@@ -269,7 +270,7 @@ public partial class CrowdSystem
         {
             var agent = agents[index];
             var agentNavigator = agentNavigators[index];
-            if (!agentNavigator.active || !query.IsValid(agent.location))
+            if (agentNavigator.active == 0 || !query.IsValid(agent.location))
             {
                 if (math.any(agent.velocity))
                 {
@@ -279,7 +280,7 @@ public partial class CrowdSystem
                 return;
             }
 
-            if (agentNavigator.pathSize > 0 && agentNavigator.goToDestination)
+            if (agentNavigator.pathSize > 0 && agentNavigator.goToDestination != 0)
             {
                 float3 currentPos = agent.location.position;
                 float3 endPos = agentNavigator.pathEnd.position;
@@ -294,13 +295,13 @@ public partial class CrowdSystem
                     if (pathStatus.IsSuccess() && cornerCount > 1)
                     {
                         agentNavigator.steeringTarget = straightPath[1].position;
-                        agentNavigator.destinationInView = straightPath[1].polygon == agentNavigator.pathEnd.polygon;
+                        agentNavigator.destinationInView = (byte)(straightPath[1].polygon == agentNavigator.pathEnd.polygon ? 1 : 0);
                         agentNavigator.nextCornerSide = vertexSide[1];
                     }
                 }
                 else
                 {
-                    agentNavigator.destinationInView = true;
+                    agentNavigator.destinationInView = 1;
                 }
                 agentNavigators[index] = agentNavigator;
 

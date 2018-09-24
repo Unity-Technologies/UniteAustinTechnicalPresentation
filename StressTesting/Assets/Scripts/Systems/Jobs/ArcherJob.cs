@@ -104,7 +104,7 @@ public struct ArcherJob : IJobParallelFor
 			// FIREEE!!!
 			arrow.position = arrowStartingPosition;
 			arrow.velocity = shootingVector * velocity;
-			arrow.active = true;
+			arrow.active = 1;
 
 			createdArrowsQueue.Enqueue(arrow);
 		}

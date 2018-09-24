@@ -1,4 +1,4 @@
-using System.Linq;
+﻿using System.Linq;
 using Unity.Collections;
 using Unity.Jobs;
 using Unity.Mathematics;
@@ -26,8 +26,8 @@ public partial class CrowdSystem : JobComponentSystem
     [Inject]
     CrowdGroup m_Crowd;
 
-    NativeList<bool1> m_PlanPathForAgent;
-    NativeList<bool1> m_EmptyPlanPathForAgent;
+    NativeList<byte> m_PlanPathForAgent;
+    NativeList<byte> m_EmptyPlanPathForAgent;
     NativeList<uint> m_PathRequestIdForAgent;
     NativeList<PathQueryQueueEcs.RequestEcs> m_PathRequests;
     NativeArray<int> m_PathRequestsRange;
@@ -75,8 +75,8 @@ public partial class CrowdSystem : JobComponentSystem
         var queryCount = world.IsValid() ? k_QueryCount : 0;
 
         var agentCount = world.IsValid() ? capacity : 0;
-        m_PlanPathForAgent = new NativeList<bool1>(agentCount, Allocator.Persistent);
-        m_EmptyPlanPathForAgent = new NativeList<bool1>(0, Allocator.Persistent);
+        m_PlanPathForAgent = new NativeList<byte>(agentCount, Allocator.Persistent);
+        m_EmptyPlanPathForAgent = new NativeList<byte>(0, Allocator.Persistent);
         m_PathRequestIdForAgent = new NativeList<uint>(agentCount, Allocator.Persistent);
         m_PathRequests = new NativeList<PathQueryQueueEcs.RequestEcs>(k_PathRequestsPerTick, Allocator.Persistent);
         m_PathRequests.ResizeUninitialized(k_PathRequestsPerTick);
@@ -409,7 +409,7 @@ public partial class CrowdSystem : JobComponentSystem
         m_PathRequestIdForAgent.ResizeUninitialized(m_PlanPathForAgent.Length);
         for (var i = oldLength; i < m_PlanPathForAgent.Length; i++)
         {
-            m_PlanPathForAgent[i] = false;
+            m_PlanPathForAgent[i] = 0;
             m_PathRequestIdForAgent[i] = PathQueryQueueEcs.RequestEcs.invalidId;
         }
     }
@@ -423,7 +423,7 @@ public partial class CrowdSystem : JobComponentSystem
             var agentNavigator = m_Crowd.agentNavigators[i];
             float3 offset = 0.5f * Vector3.up;
 
-            if (!agentNavigator.active)
+            if (agentNavigator.active == 0)
             {
                 Debug.DrawRay(agent.worldPosition, 2.0f * Vector3.up, Color.cyan);
                 Debug.DrawRay((Vector3)agent.worldPosition + 2.0f * Vector3.up - 0.4f * Vector3.right, 0.8f * Vector3.right, Color.cyan);
@@ -433,10 +433,10 @@ public partial class CrowdSystem : JobComponentSystem
 
             //Debug.DrawRay(agent.worldPosition + offset, agent.velocity, Color.cyan);
 
-            if (agentNavigator.pathSize == 0 || m_PlanPathForAgent[i] || agentNavigator.newDestinationRequested || m_PathRequestIdForAgent[i] != PathQueryQueueEcs.RequestEcs.invalidId)
+            if (agentNavigator.pathSize == 0 || m_PlanPathForAgent[i] != 0 || agentNavigator.newDestinationRequested != 0 || m_PathRequestIdForAgent[i] != PathQueryQueueEcs.RequestEcs.invalidId)
             {
                 var requestInProcess = m_PathRequestIdForAgent[i] != PathQueryQueueEcs.RequestEcs.invalidId;
-                var stateColor = requestInProcess ? Color.yellow : (m_PlanPathForAgent[i] || agentNavigator.newDestinationRequested ? Color.magenta : Color.red);
+                var stateColor = requestInProcess ? Color.yellow : (m_PlanPathForAgent[i] != 0 || agentNavigator.newDestinationRequested != 0 ? Color.magenta : Color.red);
                 Debug.DrawRay(agent.worldPosition + offset, 0.5f * Vector3.up, stateColor);
                 continue;
             }
@@ -445,7 +445,7 @@ public partial class CrowdSystem : JobComponentSystem
             float3 pathEndPos = agentNavigator.pathEnd.position;
             Debug.DrawLine(agent.worldPosition + offset, pathEndPos, Color.black);
 
-            if (agentNavigator.destinationInView)
+            if (agentNavigator.destinationInView != 0)
             {
                 Debug.DrawLine(agent.worldPosition + offset, agentNavigator.requestedDestination, Color.white);
             }

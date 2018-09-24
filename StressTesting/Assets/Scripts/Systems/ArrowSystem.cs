@@ -1,4 +1,4 @@
-using Unity.Collections;
+﻿using Unity.Collections;
 using Unity.Jobs;
 using Unity.Mathematics;
 using UnityEngine;
@@ -112,13 +112,13 @@ public class ArrowSystem : JobComponentSystem
 
 		public void Execute(int index)
 		{
-			if (arrows[index].active) 
+			if (arrows[index].active != 0)
 			{
 				var arrow = arrows[index];
 
 				if (arrow.position.y <= raycastHits[index].point.y)
 				{
-					arrow.active = false;	
+					arrow.active = 0;
 					arrows[index] = arrow;
 					stoppedArrowsQueue.Enqueue (arrowEntities [index]);
 				}

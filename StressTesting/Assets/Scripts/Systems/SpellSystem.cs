@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using Unity.Entities;
 using System.Collections.Generic;
 using Unity.Collections;
@@ -183,7 +183,7 @@ public class SpellSystem : JobComponentSystem
 		public float2 blastDirectionModifier;
 		public float3 explosionPosition;
 		public float explosionDistance;
-		public bool1 useInvertedDistance;
+		public byte useInvertedDistance;
 		public float verticalComponentFactor;
 		public float randomHorizontal;
 	}
@@ -228,11 +228,11 @@ public class SpellSystem : JobComponentSystem
 					const float explosionIntensity = 20f;
 
 					var normalizedDistance = distance / spell.explosionDistance;
-					if (spell.useInvertedDistance) normalizedDistance = 1f - normalizedDistance;
+					if (spell.useInvertedDistance != 0) normalizedDistance = 1f - normalizedDistance;
 					var verticalComponent = math.max(explosionIntensity * 0.5f,
 													(1f - normalizedDistance) * explosionIntensity * Randomizer.Float(0.8f, 1f, ref seed)) * spell.verticalComponentFactor;
 					float horizontalComponent;
-					if (spell.useInvertedDistance)
+					if (spell.useInvertedDistance != 0)
 					{
 						horizontalComponent = verticalComponent * Randomizer.Float(1f - spell.randomHorizontal, 1, ref seed);
 					}
@@ -304,7 +304,7 @@ public class SpellSystem : JobComponentSystem
 					// FIREEE!!!
 					arrow.position = arrowStartingPosition;
 					arrow.velocity = shootingVector * velocity;
-					arrow.active = true;
+					arrow.active = 1;
 
 					unitLifecycleManager.createdArrows.Enqueue(arrow);
 				}
@@ -323,7 +323,7 @@ public class SpellSystem : JobComponentSystem
 				randomHorizontal = explosion.settings.randomHorizontal,
 				blastDirectionFactor = explosion.settings.blastDirectionFactor,
 				blastDirectionModifier = explosion.settings.blastDirectionModifier,
-				useInvertedDistance = explosion.settings.useInvertedDistance,
+				useInvertedDistance = (byte)(explosion.settings.useInvertedDistance ? 1 : 0),
 				explosionDistance = explosion.settings.explosionDistance,
 				verticalComponentFactor = explosion.settings.verticalComponentFactor,
 				explosionPosition = explosion.position

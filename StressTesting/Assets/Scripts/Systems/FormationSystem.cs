@@ -118,9 +118,9 @@ public class FormationSystem : JobComponentSystem
 
 			if (formation.FormationState == FormationData.State.AllDead)
 			{
-				if (navigator.active)
+				if (navigator.active != 0)
 				{
-					navigator.active = false;
+					navigator.active = 0;
 					formationNavigators[index] = navigator;
 				}
 				return;
