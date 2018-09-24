@@ -104,7 +104,7 @@ public class UnitLifecycleManager : JobComponentSystem
 
 		var cleanupJob = new CleanupJob
 		{
-			deathQueue = deathQueue,
+			deathQueue = deathQueue.ToConcurrent(),
 			minionData = units.data,
 			entitites = units.entities
 		};

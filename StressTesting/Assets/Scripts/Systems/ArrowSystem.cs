@@ -1,4 +1,4 @@
-﻿using Unity.Collections;
+using Unity.Collections;
 using Unity.Jobs;
 using Unity.Mathematics;
 using UnityEngine;
@@ -77,7 +77,7 @@ public class ArrowSystem : JobComponentSystem
 			minionConstData = minions.constData,
 			AttackCommands = CommandSystem.AttackCommandsConcurrent,
 			minionEntities = minions.entities,
-			queueForKillingEntities = lifecycleManager.queueForKillingEntities
+			queueForKillingEntities = lifecycleManager.queueForKillingEntities.ToConcurrent()
 		};
 			
 		var stopArrowJob = new StopArrowsJob
@@ -85,7 +85,7 @@ public class ArrowSystem : JobComponentSystem
 			raycastHits = raycastHits,
 			arrows = arrows.data,
 			arrowEntities = arrows.entities,
-			stoppedArrowsQueue = lifecycleManager.deathQueue
+			stoppedArrowsQueue = lifecycleManager.deathQueue.ToConcurrent()
 		};
 
 		var arrowJobFence = arrowJob.Schedule(arrows.Length, SimulationState.SmallBatchSize, JobHandle.CombineDependencies(inputDeps, CommandSystem.AttackCommandsFence));

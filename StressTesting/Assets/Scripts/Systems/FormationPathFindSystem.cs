@@ -113,7 +113,7 @@ public class FormationPathFindSystem : JobComponentSystem
         var pathFollow = new MinionFollowPath
         {
             entities = minions.entities,
-            newPathQueries = newPathQueries,
+            newPathQueries = newPathQueries.ToConcurrent(),
             pathsInfo = minions.pathsInfo,
             minionPaths = minions.paths,
             minionTargets = minions.targets,

@@ -335,7 +335,7 @@ public class SpellSystem : JobComponentSystem
 			var explosionJob = new ApplyExplosionJob()
 			{
 				entities = rigidbodies.entities,
-				entitiesForFlying = unitLifecycleManager.entitiesForFlying,
+				entitiesForFlying = unitLifecycleManager.entitiesForFlying.ToConcurrent(),
 				transforms = rigidbodies.transforms,
 				frameCount = Time.frameCount,
 				rigidbodies = rigidbodies.rigidbodies,

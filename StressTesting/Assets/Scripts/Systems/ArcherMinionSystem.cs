@@ -46,7 +46,7 @@ public class ArcherMinionSystem : JobComponentSystem
 
 		var archerJob = new ArcherJob
 		{
-			createdArrowsQueue = lifeCycleManager.createdArrows,
+			createdArrowsQueue = lifeCycleManager.createdArrows.ToConcurrent(),
 			archers = rangedMinions.minions,
 			transforms = rangedMinions.transforms,
 			formations = formationsFromEntity,

@@ -30,7 +30,7 @@ public class CommandSystem : JobComponentSystem
 		if (!AttackCommands.IsCreated)
 		{
 			AttackCommands = new NativeQueue<AttackCommand>(Allocator.Persistent);
-			AttackCommandsConcurrent = AttackCommands;
+			AttackCommandsConcurrent = AttackCommands.ToConcurrent();
 		}
 
 		AttackCommandsConcurrentFence.Complete();
