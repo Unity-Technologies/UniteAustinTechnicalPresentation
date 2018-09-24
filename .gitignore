@@ -14,3 +14,4 @@
 *.orig
 *.orig.meta
 *.idea
+StressTesting/Assets/Plugins/Editor/JetBrains*
