@@ -1,4 +1,4 @@
-﻿using Unity.Collections;
+using Unity.Collections;
 using Unity.Jobs;
 using Unity.Mathematics;
 using Unity.Entities;
@@ -14,7 +14,7 @@ public class PrepareMinionTargetsSystem : JobComponentSystem
         public ComponentDataArray<MinionBitmask> bitmask;
         public ComponentDataArray<IndexInFormationData> indicesInFormation;
         public ComponentDataArray<MinionPathData> pathInfos;
-        public int Length;
+        public readonly int Length;
     }
 
     [Inject]

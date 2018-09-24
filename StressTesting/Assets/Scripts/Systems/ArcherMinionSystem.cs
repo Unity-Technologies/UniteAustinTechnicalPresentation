@@ -16,7 +16,7 @@ public class ArcherMinionSystem : JobComponentSystem
 		public ComponentDataArray<UnitTransformData> transforms;
 		public ComponentDataArray<MinionBitmask> bitmask;
 
-		public int Length;
+		public readonly int Length;
 	}
 
 	[Inject]

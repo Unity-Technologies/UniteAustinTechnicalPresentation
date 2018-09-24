@@ -20,7 +20,7 @@ public class PrepareBucketsSystem : JobComponentSystem
 		[ReadOnly]
 		public ComponentDataArray<MinionBitmask> bitmask;
 
-		public int Length;
+		public readonly int Length;
 	}
 	
 	[Inject]

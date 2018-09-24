@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using Unity.Entities;
 using System.Collections.Generic;
 using Unity.Collections;
@@ -49,7 +49,7 @@ public class SpellSystem : JobComponentSystem
 		public ComponentDataArray<UnitTransformData> transforms;
 		public ComponentDataArray<RigidbodyData> rigidbodies;
 		public EntityArray entities;
-		public int Length;
+		public readonly int Length;
 	}
 
 	//public struct Formations

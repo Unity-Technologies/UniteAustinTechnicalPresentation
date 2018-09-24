@@ -1,4 +1,4 @@
-﻿#define USE_SAFE_JOBS
+#define USE_SAFE_JOBS
 
 using System;
 using System.Collections.Generic;
@@ -79,7 +79,7 @@ public class TextureAnimatorSystem : JobComponentSystem
 		[ReadOnly]
 		public ComponentDataArray<UnitTransformData> transforms;
 
-		public int Length;
+		public readonly int Length;
 
 	}
 
@@ -91,7 +91,7 @@ public class TextureAnimatorSystem : JobComponentSystem
 		[ReadOnly]
 		public ComponentDataArray<UnitTransformData> transforms;
 
-		public int Length;
+		public readonly int Length;
 	}
 
 	public struct TankUnits
@@ -102,7 +102,7 @@ public class TextureAnimatorSystem : JobComponentSystem
 		[ReadOnly]
 		public ComponentDataArray<UnitTransformData> transforms;
 
-		public int Length;
+		public readonly int Length;
 	}
 
 
@@ -114,7 +114,7 @@ public class TextureAnimatorSystem : JobComponentSystem
 		[ReadOnly]
 		public ComponentDataArray<UnitTransformData> transforms;
 
-		public int Length;
+		public readonly int Length;
 	}
 
 	public struct SkeletonUnits
@@ -124,7 +124,7 @@ public class TextureAnimatorSystem : JobComponentSystem
 		[ReadOnly]
 		public ComponentDataArray<UnitTransformData> transforms;
 
-		public int Length;
+		public readonly int Length;
 	}
 
 	[Inject]

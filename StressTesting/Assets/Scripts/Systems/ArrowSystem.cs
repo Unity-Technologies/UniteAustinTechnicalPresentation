@@ -1,4 +1,4 @@
-﻿using Unity.Collections;
+using Unity.Collections;
 using Unity.Jobs;
 using Unity.Mathematics;
 using UnityEngine;
@@ -12,7 +12,7 @@ public class ArrowSystem : JobComponentSystem
 		public ComponentDataArray<ArrowData> data;
 		public EntityArray entities;
 
-		public int Length;
+		public readonly int Length;
 	}
 
 	public struct Minions
@@ -25,7 +25,7 @@ public class ArrowSystem : JobComponentSystem
 		public ComponentDataArray<UnitTransformData> transforms;
 		public EntityArray entities;
 
-		public int Length;
+		public readonly int Length;
 	}
 
 	[Inject]

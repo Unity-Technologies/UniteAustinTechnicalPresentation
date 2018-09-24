@@ -21,7 +21,7 @@ public class MinionCollisionSystem : JobComponentSystem
 		public ComponentDataArray<MinionAttackData> attackData;
 		public EntityArray entities;
 
-		public int Length;
+		public readonly int Length;
 	}
 
 	NativeList<UnitTransformData> m_Transforms;

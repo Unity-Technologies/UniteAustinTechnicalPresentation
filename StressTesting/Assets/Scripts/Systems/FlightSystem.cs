@@ -15,7 +15,7 @@ public class FlightSystem : JobComponentSystem
 		public ComponentDataArray<MinionData> data;
 		public ComponentDataArray<TextureAnimatorData> animationData;
 
-		public int Length;
+		public readonly int Length;
 	}
 
 	[Inject]

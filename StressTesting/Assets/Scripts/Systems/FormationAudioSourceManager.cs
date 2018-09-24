@@ -26,7 +26,7 @@ public class FormationAudioSourceManager : JobComponentSystem
 		[ReadOnly]
 		public EntityArray entities;
 
-		public int Length;
+		public readonly int Length;
 	}
 
 	[Inject]

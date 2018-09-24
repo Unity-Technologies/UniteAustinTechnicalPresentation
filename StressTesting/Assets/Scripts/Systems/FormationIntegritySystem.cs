@@ -1,4 +1,4 @@
-﻿using Unity.Collections;
+using Unity.Collections;
 using Unity.Jobs;
 using Unity.Mathematics;
 using Unity.Entities;
@@ -12,7 +12,7 @@ public class FormationIntegritySystem : JobComponentSystem
         public ComponentDataArray<FormationData> data;
         public BufferArray<EntityRef> unitData;
 
-        public int Length;
+        public readonly int Length;
     }
 
     [Inject]

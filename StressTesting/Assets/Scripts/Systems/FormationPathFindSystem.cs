@@ -1,4 +1,4 @@
-﻿using Unity.Collections;
+using Unity.Collections;
 using Unity.Jobs;
 using Unity.Mathematics;
 using UnityEngine;
@@ -23,7 +23,7 @@ public class FormationPathFindSystem : JobComponentSystem
         public ComponentDataArray<CrowdAgentNavigator> navigators;
         public ComponentDataArray<FormationIntegrityData> integrityData;
 
-        public int Length;
+        public readonly int Length;
     }
 
     public struct Minions
@@ -33,7 +33,7 @@ public class FormationPathFindSystem : JobComponentSystem
         public BufferArray<PathElement> paths;
         public ComponentDataArray<NavMeshLocationComponent> navMeshLocation;
         public EntityArray entities;
-        public int Length;
+        public readonly int Length;
     }
     [Inject]
     BufferFromEntity<PathElement> minionPaths;

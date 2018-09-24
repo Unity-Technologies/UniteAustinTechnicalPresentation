@@ -402,7 +402,7 @@ public class EditorHelperSystem : JobComponentSystem
 		public ComponentDataArray<MinionBitmask> bitmask;
 		public EntityArray entities;
 
-		public int Length;
+		public readonly int Length;
 	}
 
 	public struct Formations
@@ -415,7 +415,7 @@ public class EditorHelperSystem : JobComponentSystem
 		public ComponentDataArray<FormationHighLevelPath> highLevelPaths;
 		public ComponentDataArray<FormationIntegrityData> integrityData;
 
-		public int Length;
+		public readonly int Length;
 	}
 
 	// To make sure dependencies for this system is a superset of the dependencies of FormationIntegritySystem

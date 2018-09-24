@@ -24,7 +24,7 @@ public class MinionSystem : JobComponentSystem
 		public EntityArray entities;
 		public ComponentDataArray<IndexInFormationData> indicesInFormation;
 
-		public int Length;
+		public readonly int Length;
 	}
 	
 	[Inject]
