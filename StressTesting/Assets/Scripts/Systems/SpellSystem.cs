@@ -5,6 +5,7 @@ using Unity.Collections;
 using Unity.Jobs;
 using Unity.Mathematics;
 using UnityEngine.Profiling;
+using Random = UnityEngine.Random;
 
 // TODO there will be a sexy events system
 [UpdateAfter(typeof(CommandSystem))]
