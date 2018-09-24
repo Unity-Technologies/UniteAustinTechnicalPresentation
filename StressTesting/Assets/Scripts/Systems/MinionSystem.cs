@@ -48,7 +48,7 @@ public class MinionSystem : JobComponentSystem
 	public const float step = 2f;
 	
 	NavMeshQuery moveLocationQuery;
-	protected override void OnCreateManager(int capacity)
+	protected override void OnCreateManager()
 	{
 		var navMeshWorld = NavMeshWorld.GetDefaultWorld();
 		moveLocationQuery = new NavMeshQuery(navMeshWorld, Allocator.Persistent);

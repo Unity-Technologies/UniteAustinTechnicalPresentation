@@ -31,7 +31,7 @@ public class MinionCollisionSystem : JobComponentSystem
 	[Inject]
 	private Minions minions;
 
-	protected override void OnCreateManager(int capacity)
+	protected override void OnCreateManager()
 	{
 		m_Transforms = new NativeList<UnitTransformData>(Allocator.Persistent);
 		m_Entities = new NativeList<Entity>(Allocator.Persistent);

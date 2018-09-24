@@ -438,9 +438,9 @@ public class EditorHelperSystem : JobComponentSystem
 
 	public Queue<Action> work;
 
-	protected override void OnCreateManager (int capacity)
+	protected override void OnCreateManager()
 	{
-		base.OnCreateManager (capacity);
+		base.OnCreateManager();
 
 		work = new Queue<Action>();
 		I = this;

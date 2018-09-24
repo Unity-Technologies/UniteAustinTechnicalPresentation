@@ -62,9 +62,9 @@ public class FormationPathFindSystem : JobComponentSystem
     private NativeList<int> queryIndexFree;
     private NativeList<Entity> findingEntities;
 
-    protected override void OnCreateManager(int capacity)
+    protected override void OnCreateManager()
     {
-        base.OnCreateManager(capacity);
+        base.OnCreateManager();
 
         //costs = new NativeArray<float>(32, Allocator.Persistent);
         //for (int i = 0; i < 32; i++) costs[i] = 1;

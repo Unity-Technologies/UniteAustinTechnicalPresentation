@@ -75,9 +75,9 @@ public class UnitLifecycleManager : JobComponentSystem
 		base.OnDestroyManager();
 	}
 
-	protected override void OnCreateManager(int capacity)
+	protected override void OnCreateManager()
 	{
-		base.OnCreateManager(capacity);
+		base.OnCreateManager();
 		if (!queueForKillingEntities.IsCreated) queueForKillingEntities = new NativeQueue<Entity>(Allocator.Persistent);
 		if (!entitiesForFlying.IsCreated) entitiesForFlying = new NativeQueue<Entity>(Allocator.Persistent);
 	}

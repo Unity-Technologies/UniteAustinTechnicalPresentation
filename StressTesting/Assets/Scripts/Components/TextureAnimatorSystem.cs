@@ -1,4 +1,4 @@
-﻿#define USE_SAFE_JOBS
+#define USE_SAFE_JOBS
 
 using System;
 using System.Collections.Generic;
@@ -400,9 +400,9 @@ public class TextureAnimatorSystem : JobComponentSystem
 
 	#endregion
 
-	protected override void OnCreateManager(int capacity)
+	protected override void OnCreateManager()
 	{
-		base.OnCreateManager(capacity);
+		base.OnCreateManager();
 
 		// CHECK: Calling Initialize here causes a 100% reproducable crash on play
 		//Initialize();

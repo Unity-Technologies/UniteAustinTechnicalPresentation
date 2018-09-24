@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using Unity.Collections;
 using Unity.Jobs;
 using Unity.Mathematics;
@@ -49,18 +49,17 @@ public partial class CrowdSystem : JobComponentSystem
     JobHandle m_AfterQueriesCleanup;
     JobHandle m_AfterMovedRequestsForgotten;
 
-    int m_InitialCapacity;
+    int m_InitialCapacity = 10;
 
     const int k_Start = 0;
     const int k_Count = 1;
     const int k_DataSize = 2;
 
-    protected override void OnCreateManager(int capacity)
+    protected override void OnCreateManager()
     {
-        base.OnCreateManager(capacity);
+        base.OnCreateManager();
 
-        m_InitialCapacity = capacity;
-        Initialize(capacity);
+        Initialize(m_InitialCapacity);
     }
 
     protected override void OnDestroyManager()

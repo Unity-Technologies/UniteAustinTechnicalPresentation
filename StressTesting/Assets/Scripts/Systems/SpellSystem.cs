@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using Unity.Entities;
 using System.Collections.Generic;
 using Unity.Collections;
@@ -108,9 +108,9 @@ public class SpellSystem : JobComponentSystem
 	[Inject]
 	private UnitLifecycleManager unitLifecycleManager;
 
-	protected override void OnCreateManager(int capacity)
+	protected override void OnCreateManager()
 	{
-		base.OnCreateManager(capacity);
+		base.OnCreateManager();
 
 		if (SpellExplosionsQueue == null)
 			SpellExplosionsQueue = new List<SpellExplosion>();
