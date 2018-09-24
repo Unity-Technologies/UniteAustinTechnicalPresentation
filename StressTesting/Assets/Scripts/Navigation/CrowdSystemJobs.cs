@@ -185,7 +185,7 @@ public partial class CrowdSystem
         public ComponentDataArray<CrowdAgent> agents;
 
         public ComponentDataArray<CrowdAgentNavigator> agentNavigators;
-        public FixedArrayArray<PolygonId> paths;
+        public BufferArray<PolygonIdElement> paths;
 
         public void Execute(int index)
         {
@@ -198,7 +198,7 @@ public partial class CrowdSystem
             var i = 0;
             for (; i < agentNavigator.pathSize; ++i)
             {
-                if (path[i] == agLoc.polygon)
+                if (path[i].Value == agLoc.polygon)
                     break;
             }
 
@@ -249,7 +249,7 @@ public partial class CrowdSystem
         [ReadOnly]
         public NavMeshQuery query;
         [ReadOnly]
-        public FixedArrayArray<PolygonId> paths;
+        public BufferArray<PolygonIdElement> paths;
 
         public ComponentDataArray<CrowdAgentNavigator> agentNavigators;
         public ComponentDataArray<CrowdAgent> agents;
@@ -290,7 +290,7 @@ public partial class CrowdSystem
                 {
                     var cornerCount = 0;
                     var path = paths[index];
-                    var pathStatus = PathUtils.FindStraightPath(query, currentPos, endPos, path, agentNavigator.pathSize, ref straightPath, ref straightPathFlags, ref vertexSide, ref cornerCount, straightPath.Length);
+                    var pathStatus = PathUtils.FindStraightPath(query, currentPos, endPos, path.Reinterpret<PolygonId>().ToNativeArray(), agentNavigator.pathSize, ref straightPath, ref straightPathFlags, ref vertexSide, ref cornerCount, straightPath.Length);
 
                     if (pathStatus.IsSuccess() && cornerCount > 1)
                     {
@@ -363,7 +363,7 @@ public partial class CrowdSystem
     public struct ApplyQueryResultsJob : IJob
     {
         public PathQueryQueueEcs queryQueue;
-        public FixedArrayArray<PolygonId> paths;
+        public BufferArray<PolygonIdElement> paths;
         public ComponentDataArray<CrowdAgentNavigator> agentNavigators;
 
         public void Execute()
@@ -386,4 +386,10 @@ public partial class CrowdSystem
             queryQueue.CleanupProcessedRequests(ref pathRequestIdForAgent);
         }
     }
+}
+
+[InternalBufferCapacity(128)]
+public struct PolygonIdElement : IBufferElementData
+{
+    public PolygonId Value;
 }

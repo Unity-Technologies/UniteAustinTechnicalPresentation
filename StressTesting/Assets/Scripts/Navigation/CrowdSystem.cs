@@ -20,7 +20,7 @@ public partial class CrowdSystem : JobComponentSystem
     {
         public ComponentDataArray<CrowdAgent> agents;
         public ComponentDataArray<CrowdAgentNavigator> agentNavigators;
-        public FixedArrayArray<PolygonId> paths;
+        public BufferArray<PolygonIdElement> paths;
     }
 
     [Inject]

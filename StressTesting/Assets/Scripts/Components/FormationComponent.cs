@@ -158,7 +158,8 @@ public struct FormationIntegrityData : IComponentData
 }
 
 // TODO remove this workaround, you should be able to add to formationEntity ComponentType.FixedArray(typeof(Entity))
-public struct EntityRef
+[InternalBufferCapacity(8)]
+public struct EntityRef : IBufferElementData
 {
 	public Entity entity;
 

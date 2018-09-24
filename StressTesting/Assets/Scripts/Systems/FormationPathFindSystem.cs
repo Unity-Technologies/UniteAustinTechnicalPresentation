@@ -8,6 +8,12 @@ using Unity.Entities;
 using UnityEngine.Experimental.AI;
 using UnityEngine.Profiling;
 
+[InternalBufferCapacity(SimulationState.MaxPathSize)]
+public struct PathElement : IBufferElementData
+{
+    public float3 Value;
+}
+
 [UpdateAfter(typeof(FormationIntegritySystem))]
 public class FormationPathFindSystem : JobComponentSystem
 {
@@ -24,13 +30,13 @@ public class FormationPathFindSystem : JobComponentSystem
     {
         public ComponentDataArray<MinionTarget> targets;
         public ComponentDataArray<MinionPathData> pathsInfo;
-        public FixedArrayArray<float3> paths;
+        public BufferArray<PathElement> paths;
         public ComponentDataArray<NavMeshLocationComponent> navMeshLocation;
         public EntityArray entities;
         public int Length;
     }
     [Inject]
-    FixedArrayFromEntity<float3> minionPaths;
+    BufferFromEntity<PathElement> minionPaths;
     [Inject]
     ComponentDataFromEntity<NavMeshLocationComponent> minionNavMeshLocation;
     [Inject]
@@ -205,7 +211,7 @@ public class FormationPathFindSystem : JobComponentSystem
         public Entity entity;
         public NativeQueue<Entity> completePathQueries;
         public ComponentDataFromEntity<MinionPathData> pathsInfo;
-        public FixedArrayFromEntity<float3> minionPaths;
+        public BufferFromEntity<PathElement> minionPaths;
         public ComponentDataFromEntity<NavMeshLocationComponent> navMeshLocation;
 
         // Temp data for path finding
@@ -280,7 +286,7 @@ public class FormationPathFindSystem : JobComponentSystem
                     {
                         for (var i = 0; i < cornerCount; i++)
                         {
-                            minionPath[i] = straightPath[i].position;
+                            minionPath[i] = new PathElement { Value = straightPath[i].position };
                         }
 
                         pathInfo.pathFoundToPosition = straightPath[cornerCount - 1].position;
@@ -309,7 +315,7 @@ public class FormationPathFindSystem : JobComponentSystem
         public EntityArray entities;
         public NativeQueue<Entity>.Concurrent newPathQueries;
         public ComponentDataArray<MinionPathData> pathsInfo;
-        public FixedArrayArray<float3> minionPaths;
+        public BufferArray<PathElement> minionPaths;
         public ComponentDataArray<MinionTarget> minionTargets;
 
         public ComponentDataArray<NavMeshLocationComponent> navMeshLocation;
@@ -347,7 +353,7 @@ public class FormationPathFindSystem : JobComponentSystem
                     {
                         var potentialTarget = minionPath[pathInfo.currentCornerIndex];
 
-                        if (mathx.lengthSqr((float3)navMeshLocation[index].NavMeshLocation.position - potentialTarget) < 0.01f)
+                        if (mathx.lengthSqr((float3)navMeshLocation[index].NavMeshLocation.position - potentialTarget.Value) < 0.01f)
                         {
                             // Increase the index if needed
                             if (pathInfo.currentCornerIndex < pathInfo.pathSize)
@@ -358,7 +364,7 @@ public class FormationPathFindSystem : JobComponentSystem
                             }
                         }
 
-                        minionTarget.Target = potentialTarget;
+                        minionTarget.Target = potentialTarget.Value;
                     }
                 }
 

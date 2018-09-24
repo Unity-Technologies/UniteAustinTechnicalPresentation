@@ -74,8 +74,8 @@ public class Spawner : MonoBehaviour
 
 		entityManager.AddComponentData(formationEntity, new CrowdAgent { worldPosition = formationData.Position, type = 0, location = location});
 		entityManager.AddComponentData(formationEntity, highLevelPath);
-		entityManager.AddComponent(formationEntity, ComponentType.FixedArray(typeof(EntityRef), formationData.UnitCount));
-		entityManager.AddComponent(formationEntity, ComponentType.FixedArray(typeof(PolygonId), 128));
+		entityManager.AddBuffer<EntityRef>(formationEntity);
+		entityManager.AddBuffer<PolygonIdElement>(formationEntity);
 		entityManager.AddComponentData(formationEntity, new FormationIntegrityData() { });
 
 		var crowd = new CrowdAgentNavigator()
@@ -98,7 +98,7 @@ public class Spawner : MonoBehaviour
 		entityManager.AddComponentData(prototypeMinion, new MinionBitmask(formationData.IsFriendly, spawnedFromPortals));
 		entityManager.AddComponentData(prototypeMinion, new MinionAttackData(new Entity()));
 		entityManager.AddComponentData(prototypeMinion, new MinionPathData());
-		entityManager.AddComponent(prototypeMinion, ComponentType.FixedArray(typeof(float3), SimulationState.MaxPathSize));
+		entityManager.AddBuffer<PathElement>(prototypeMinion);
 		entityManager.AddComponentData(prototypeMinion, new IndexInFormationData(-1));
 		entityManager.AddComponentData(prototypeMinion, new NavMeshLocationComponent());
 		

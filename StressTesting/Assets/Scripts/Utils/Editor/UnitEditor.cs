@@ -308,7 +308,7 @@ public class UnitEditor :  EditorWindow
 		{
 			for (int i = 0; i < EditorHelperSystem.I.minions.Length; i++)
 			{
-				DrawUnitPaths(EditorHelperSystem.I.minions.pathsInfo[i], EditorHelperSystem.I.minions.paths[i]);
+				DrawUnitPaths(EditorHelperSystem.I.minions.pathsInfo[i], EditorHelperSystem.I.minions.paths[i].Reinterpret<float3>().ToNativeArray());
 			}
 		}
 		
@@ -396,7 +396,7 @@ public class EditorHelperSystem : JobComponentSystem
 		public ComponentDataArray<TextureAnimatorData> animationData;
 		public ComponentDataArray<MinionData> data;
 		public ComponentDataArray<MinionPathData> pathsInfo;
-		public FixedArrayArray<float3> paths;
+		public BufferArray<PathElement> paths;
 		public ComponentDataArray<NavMeshLocationComponent> locationComponents;
 		public ComponentDataArray<MinionAttackData> attackData;
 		public ComponentDataArray<MinionBitmask> bitmask;
@@ -420,7 +420,7 @@ public class EditorHelperSystem : JobComponentSystem
 
 	// To make sure dependencies for this system is a superset of the dependencies of FormationIntegritySystem
     [Inject]
-    public FixedArrayFromEntity<EntityRef> entityRefs;
+    public BufferFromEntity<EntityRef> entityRefs;
 
 
 	[Inject]

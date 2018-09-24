@@ -11,7 +11,7 @@ public class FormationMaintenanceSystem : JobComponentSystem
 	private FormationSystem.Formations formations;
 
 	[Inject]
-	private FixedArrayFromEntity<EntityRef> formationsUnitDataFromEntity;
+	private BufferFromEntity<EntityRef> formationsUnitDataFromEntity;
 
 	[Inject]
 	private ComponentDataFromEntity<IndexInFormationData> indicesInFormation;
@@ -65,7 +65,7 @@ public class FormationMaintenanceSystem : JobComponentSystem
 	{
 		[ReadOnly]
 		public ComponentDataArray<FormationData> formations;
-		public FixedArrayArray<EntityRef> formationUnitData;
+		public BufferArray<EntityRef> formationUnitData;
 
 		public void Execute(int index)
 		{
@@ -82,7 +82,7 @@ public class FormationMaintenanceSystem : JobComponentSystem
 	[ComputeJobOptimization]
 	private struct FillUnitDataJob : IJob // this can't be parallel job because of FromEntity does not support parallel writing
 	{
-		public FixedArrayFromEntity<EntityRef> formationUnitData;
+		public BufferFromEntity<EntityRef> formationUnitData;
 		[ReadOnly]
 		public ComponentDataArray<UnitTransformData> transforms;
 		[ReadOnly]
@@ -108,7 +108,7 @@ public class FormationMaintenanceSystem : JobComponentSystem
 	{
 		[ReadOnly]
 		public ComponentDataArray<FormationData> formations;
-		public FixedArrayArray<EntityRef> formationUnitData;
+		public BufferArray<EntityRef> formationUnitData;
 
 		[NativeDisableParallelForRestriction]
 		public ComponentDataFromEntity<IndexInFormationData> indicesInFormation;

@@ -10,7 +10,7 @@ public class FormationIntegritySystem : JobComponentSystem
     {
         public ComponentDataArray<FormationIntegrityData> integrityData;
         public ComponentDataArray<FormationData> data;
-        public FixedArrayArray<EntityRef> unitData;
+        public BufferArray<EntityRef> unitData;
 
         public int Length;
     }
@@ -62,7 +62,7 @@ public class FormationIntegritySystem : JobComponentSystem
 
 
         [ReadOnly]
-        public FixedArrayArray<EntityRef> formationUnitData;
+        public BufferArray<EntityRef> formationUnitData;
         
         [ReadOnly]
         public ComponentDataArray<FormationData> formationData;

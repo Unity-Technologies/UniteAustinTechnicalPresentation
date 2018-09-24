@@ -14,7 +14,7 @@ public class FormationSystem : JobComponentSystem
 	public struct Formations
 	{
 		public ComponentDataArray<FormationData> data;
-		public FixedArrayArray<EntityRef> unitData;
+		public BufferArray<EntityRef> unitData;
 		public ComponentDataArray<FormationNavigationData> navigationData;
 		public ComponentDataArray<FormationClosestData> closestFormations;
 		public ComponentDataArray<CrowdAgentNavigator> navigators;
