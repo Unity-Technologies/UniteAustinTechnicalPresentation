@@ -74,7 +74,10 @@ public class FormationMaintenanceSystem : JobComponentSystem
 
 			for (var i = 0; i < len; i++)
 			{
-				unitData[i] = new EntityRef();
+				if (i < unitData.Length)
+					unitData[i] = new EntityRef();
+				else
+					unitData.Add(new EntityRef());
 			}
 		}
 	}
@@ -98,7 +101,12 @@ public class FormationMaintenanceSystem : JobComponentSystem
 			{
 				var unitData = formationUnitData[transforms[index].FormationEntity];
 
-				unitData[indicesInFormation[index].IndexInFormation] = new EntityRef(minionEntities[index]);
+				var bufferIndex = indicesInFormation[index].IndexInFormation;
+				var entityRef = new EntityRef(minionEntities[index]);
+				if (bufferIndex < unitData.Length)
+					unitData[bufferIndex] = entityRef;
+				else
+					unitData.Add(entityRef);
 			}
 		}
 	}

@@ -141,7 +141,11 @@ public struct PathQueryQueueEcs
             var pathLength = math.min(resultNodes.Length, agentPathBuffer.Length);
             for (var j = 0; j < pathLength; j++)
             {
-                agentPathBuffer[j] = new PolygonIdElement { Value = resultNodes[j] };
+                var id = new PolygonIdElement { Value = resultNodes[j] };
+                if (j < agentPathBuffer.Length)
+                    agentPathBuffer[j] = id;
+                else
+                    agentPathBuffer.Add(id);
             }
 
             var navigator = agentNavigators[index];

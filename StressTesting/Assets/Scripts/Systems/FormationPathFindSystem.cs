@@ -286,7 +286,11 @@ public class FormationPathFindSystem : JobComponentSystem
                     {
                         for (var i = 0; i < cornerCount; i++)
                         {
-                            minionPath[i] = new PathElement { Value = straightPath[i].position };
+                            var pathElement = new PathElement { Value = straightPath[i].position };
+                            if (i < minionPath.Length)
+                                minionPath[i] = pathElement;
+                            else
+                                minionPath.Add(pathElement);
                         }
 
                         pathInfo.pathFoundToPosition = straightPath[cornerCount - 1].position;
