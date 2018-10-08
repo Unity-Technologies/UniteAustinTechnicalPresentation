@@ -355,7 +355,10 @@ public class FormationPathFindSystem : JobComponentSystem
 
                     if (maxPathSize != 0)
                     {
-                        var potentialTarget = minionPath[pathInfo.currentCornerIndex];
+                        var currentCornerIndex = pathInfo.currentCornerIndex;
+                        var potentialTarget = currentCornerIndex < minionPath.Length
+                            ? minionPath[currentCornerIndex]
+                            : default(PathElement);
 
                         if (mathx.lengthSqr((float3)navMeshLocation[index].NavMeshLocation.position - potentialTarget.Value) < 0.01f)
                         {
@@ -363,7 +366,10 @@ public class FormationPathFindSystem : JobComponentSystem
                             if (pathInfo.currentCornerIndex < pathInfo.pathSize)
                             {
                                 // Go to next corner
-                                potentialTarget = minionPath[++pathInfo.currentCornerIndex];
+                                currentCornerIndex = ++pathInfo.currentCornerIndex;
+                                potentialTarget = currentCornerIndex < minionPath.Length
+                                    ? minionPath[currentCornerIndex]
+                                    : default(PathElement);
                                 pathDataChanged = true;
                             }
                         }
