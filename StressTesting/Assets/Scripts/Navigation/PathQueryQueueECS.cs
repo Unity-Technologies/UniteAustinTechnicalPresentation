@@ -138,14 +138,14 @@ public struct PathQueryQueueEcs
             var resultNodes = new NativeSlice<PolygonId>(m_ResultNodes, resultPathInfo.begin, resultPathInfo.size);
             var agentPathBuffer = agentPaths[index];
 
-            var pathLength = math.min(resultNodes.Length, agentPathBuffer.Length);
+            var pathLength = resultNodes.Length; 
             for (var j = 0; j < pathLength; j++)
             {
                 var id = new PolygonIdElement { Value = resultNodes[j] };
                 if (j < agentPathBuffer.Length)
                     agentPathBuffer[j] = id;
                 else
-                    agentPathBuffer.Add(id);
+                    agentPathBuffer.Add(id); //agent path buffer will be set to the largest size ever used... does it make sense to resize to what we're currently using?
             }
 
             var navigator = agentNavigators[index];
